@@ -1,0 +1,70 @@
+\begin{figure*}[tb]
+\centering
+    \centering
+    \subfigure[Read heavy]{
+       \includegraphics[scale =0.37] {images/performance/workloada}
+       \label{performance.workloada}
+     }
+     \subfigure[Read mostly]{
+       \includegraphics[scale =0.37] {images/performance/workloadb}
+       \label{performance.workloadb}
+     }
+     \subfigure[Read only]{
+       \includegraphics[scale =0.37] {images/performance/workloadc}
+       \label{performance.workloadc}
+     }
+     \subfigure[Read latest]{
+       \includegraphics[scale =0.37] {images/performance/workloadd}
+       \label{performance.workloadd}
+     }
+     \subfigure[Short Ranges]{
+       \includegraphics[scale =0.37] {images/performance/workloade}
+       \label{performance.workloade}
+     }
+     \subfigure[Read-Insert-Update]{
+       \includegraphics[scale =0.37] {images/performance/workloadf}
+       \label{performance.workloadf}
+     }
+     \subfigure[Bulk Insert]{
+       \includegraphics[scale =0.37] {images/performance/workloadi}
+       \label{performance.workloadi}
+     }
+    
+    \label{performance.workloads}
+\caption{Latencies of Workloads A to F and I – Latency of Read Database Operations for Different Number of Records}
+\end{figure*}
+
+\begin{figure*}[tb]
+\centering
+\subfigure[Read heavy]{
+   \includegraphics[scale =0.37] {images/scalability/workloada}
+   \label{scalability.workloada}
+ }
+ \subfigure[Read mostly]{
+   \includegraphics[scale =0.37] {images/scalability/workloadb}
+   \label{scalability.workloadb}
+ }
+ \subfigure[Read only]{
+   \includegraphics[scale =0.37] {images/scalability/workloadc}
+   \label{scalability.workloadc}
+ }
+ \subfigure[Read latest]{
+   \includegraphics[scale =0.37] {images/scalability/workloadd}
+   \label{scalability.workloadd}
+ }
+ \subfigure[Short Ranges]{
+   \includegraphics[scale =0.37] {images/scalability/workloade}
+   \label{scalability.workloade}
+ }
+ \subfigure[Read-Insert-Update]{
+   \includegraphics[scale =0.37] {images/scalability/workloadf}
+   \label{scalability.workloadf}
+ }
+ \subfigure[Bulk Insert]{
+   \includegraphics[scale =0.37] {images/scalability/workloadi}
+   \label{scalability.workloadi}
+ }
+
+\label{scalability.workloads}
+\caption{Latencies of Workloads A to F and I – Latency of Read Database Operations for Different Number of Records}
+\end{figure*}

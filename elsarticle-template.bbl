@@ -1,27 +1,174 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{Feynman1963118}
-R.~Feynman, F.~{Vernon Jr.}, The theory of a general quantum system interacting
-  with a linear dissipative system, Annals of Physics 24 (1963) 118--173.
-\newblock \href {http://dx.doi.org/10.1016/0003-4916(63)90068-X}
-  {\path{doi:10.1016/0003-4916(63)90068-X}}.
+\bibitem{R.Kumar2015208}
+{R. Kumar and F. Fernandes}, {Challenges in Storage and Retrieval of Healthcare
+  Data: Review of various NoSQL Technologies}, {International Journal of
+  Innovative Research in Computer and Communication Engineering} 3 (2015)
+  208--213.
 
-\bibitem{Dirac1953888}
-P.~Dirac, The lorentz transformation and absolute time, Physica 19~(1-–12)
-  (1953) 888--896.
-\newblock \href {http://dx.doi.org/10.1016/S0031-8914(53)80099-6}
-  {\path{doi:10.1016/S0031-8914(53)80099-6}}.
+\bibitem{M.Ercan190510}
+{M. Ercan and M. Lane}, {Evaluation of NoSQL databases for EHR systems}, in:
+  {Proceedings of the 25th Australasian Conference on Information Systems},
+  {ACIS}, {Portu, Portugal}, 2014, p.~10.
 
-\bibitem{V.Abramova201314}
-V.~Abramova, J.~Bernardino, Nosql databases: Mongodb vs cassandra, in:
-  Proceedings International C* Conference on Computer Science and Software
-  Engineering, ACM, Portu, Portugal, July 2013, pp. 14--23.
-\newblock \href {http://dx.doi.org/10.1145/2494444.2494447}
-  {\path{doi:10.1145/2494444.2494447}}.
+\bibitem{Z.Goli-Malekabadi201675}
+{Z. Goli-Malekabadi and M. Sargolzaei-Javan and M.K. Akbari}, {An effective
+  model for store and retrieve big health data in cloud computing}, {Computer
+  Methods and Programs Biomedicine} 132 (2016) 75--82.
+\newblock \href {http://dx.doi.org/10.1016/j.cmpb.2016.04.016}
+  {\path{doi:10.1016/j.cmpb.2016.04.016}}.
+
+\bibitem{K.Lee201299}
+{K. Lee and W. Tang and K. Choi}, {Alternatives to relational database:
+  Comparison of NoSQL and XML approaches for clinical data storage}, {Computer
+  Methods and Programs in Biomedicine } 110 (2012) 99--109.
+\newblock \href {http://dx.doi.org/10.1016/j.cmpb.2012.10.018}
+  {\path{doi:10.1016/j.cmpb.2012.10.018}}.
+
+\bibitem{P.Atzeni1993}
+{P. Atzeni and V.D. Antonellis}, {Relational Database Theory}, {IHI Innovation
+  Report} (1993) 5.
+
+\bibitem{K.Berg201329}
+{K. Berg and T. Seymour}, {History of Databases}, {International Journal of
+  Management and Information Systems} 17 (2013) 29--35.
+\newblock \href {http://dx.doi.org/10.19030/ijmis.v17i1.7587}
+  {\path{doi:10.19030/ijmis.v17i1.7587}}.
+
+\bibitem{D.Suciu200139}
+{D. Suciu}, {ACM SIGMOD}, 30 30 (2001) 39--45.
+\newblock \href {http://dx.doi.org/10.1145/603867.603874}
+  {\path{doi:10.1145/603867.603874}}.
+
+\bibitem{C.S.Kruse201638}
+{C.S. Kruse and R. Goswamy and Y. Raval and S. Marawi}, {Challenges and
+  Opportunities of Big Data in Health Care: A Systematic Review }, {JMIR
+  Medical Informatics } 4 (2016) 38.
+\newblock \href {http://dx.doi.org/10.2196/medinform.5359}
+  {\path{doi:10.2196/medinform.5359}}.
+
+\bibitem{S.White201413}
+{S. White}, {A review of big data in health care: challenges and
+  opportunities}, {Open Access Bioinformatics} (2014) 13--18\href
+  {http://dx.doi.org/10.2147/OAB.S50519} {\path{doi:10.2147/OAB.S50519}}.
+
+\bibitem{S.Wasan1192016}
+{S. Wasan and V. Bhatnagar}, {The impact of data mining techniques on medical
+  diagnostics }, {Data Science Journal} 5 (2016) 119--126.
+\newblock \href {http://dx.doi.org/10.2481/dsj.5.119}
+  {\path{doi:10.2481/dsj.5.119}}.
+
+\bibitem{H.Al-Fatlawi2015122}
+{H. Al-Fatlawi and B. Al-Assadi and H. Jabardi}, {Dynamic database schema for
+  Hospital Management System}, {Asian Journal of Information Technology} 14
+  (2015) 122--128.
+\newblock \href {http://dx.doi.org/10.3923/ajit.2015.122.128}
+  {\path{doi:10.3923/ajit.2015.122.128}}.
+
+\bibitem{O.Schmitt20121}
+{O. Schmitt and T. Majchrzak}, {Using document-based databases for medical
+  information systems in unreliable environments}, in: {Proceedings of the 9th
+  International ISCRAM Conference }, {ISCRAM}, {Vancouver, Canada}, April 2012,
+  pp. 1--6.
+
+\bibitem{Y.Jin2011288}
+{Y. Jin and T. Deyu and Z. Xianrong}, {Research on the Distributed Electronic
+  Medical Records Storage Model}, in: {Proceedings in 2011 IEEE International
+  Symposium on IT in Medicine and Education}, {IEEE}, {Cuangzhou, China},
+  December 2011, pp. 288--292.
+\newblock \href {http://dx.doi.org/10.1109/ITiME.2011.6132041}
+  {\path{doi:10.1109/ITiME.2011.6132041}}.
+
+\bibitem{V.Manoj201411}
+{V. Manoj}, {Comparative Study of NoSQL Document, Column Store Databases and
+  Evaluation of Cassandra}, {International Journal of Database Management
+  Systems (IJDMS)} 6 (2014) 11--26.
+\newblock \href {http://dx.doi.org/10.5121/ijdms.2014.6402}
+  {\path{doi:10.5121/ijdms.2014.6402}}.
+
+\bibitem{J.Gilchrist20113244}
+{J. Gilchrist and C. Ennet and M. Frize and E. Bariciak}, {Performance
+  Evaluation of Various Storage Formats for Clinical Data Repositories}, {IEEE
+  Transactions on Instrumentation and Measurement} 60 (2011) 3244--3252.
+\newblock \href {http://dx.doi.org/10.1109/TIM.2011.2122850}
+  {\path{doi:10.1109/TIM.2011.2122850}}.
+
+\bibitem{Z.Parker20131}
+{Z. Parker and S. Poe and S.V. Vrbsky}, {Comparing Nosql Mongodb to an Sql DB},
+  in: {Proceedings of the 51st ACM Southeast Conference}, {ACMSE}, {Savannah,
+  Georgia, USA}, April 2013, pp. 1--6.
+\newblock \href {http://dx.doi.org/10.1145/2498328.2500047}
+  {\path{doi:10.1145/2498328.2500047}}.
+
+\bibitem{G.D.Ferreira2013125}
+{G.D. Ferreira and A. Calil and R.D. Mello}, {Providing DDL Support for a
+  Relational Layer over a Document NoSQL Database}, in: {Proceedings of
+  International Conference on Information Integration and Web-based
+  Applications Services}, {ACM}, {Vienna, Austria}, December 2013, pp.
+  125--132.
+\newblock \href {http://dx.doi.org/10.1145/2539150.2539196}
+  {\path{doi:10.1145/2539150.2539196}}.
+
+\bibitem{S.Edlich2018}
+S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
+  (accessed on September 2018)}.
+
+\bibitem{C.Chan2010300}
+{C. Chan and D. Kaufman}, {A technology selection framework for supporting
+  delivery of patient-oriented health interventions in developing countries},
+  {Journal of Biomedical Informatics. } 43 (2010) 300--306.
+\newblock \href {http://dx.doi.org/300--306} {\path{doi:300--306}}.
+
+\bibitem{A.Ostrovsky20141}
+{A. Ostrovsky and N. Dean and A. Simon and K. Mate}, {A Framework for Selecting
+  Digital Health Technology}, {IHI Innovation Report} (June 2014) 5.
+
+\bibitem{G.Weglarz200419}
+{G. Weglarz}, {Two worlds of data – unstructured and structured }, {DM
+  Review} 14 (2004) 19--22.
+
+\bibitem{J.Walonoski2018230}
+{J. Walonoski and M. Kramer and J. Nichols and A. Quina and C. Moesel and D.
+  Hall and C. Duffett and K. Dube and T. Gallagher and S. McLachlan}, {Synthea:
+  An approach, method, and software mechanism for generating synthetic patients
+  and the synthetic electronic health care record}, {Journal of the American
+  Medical Informatics Association} 25 (2018) 230--238.
+\newblock \href {http://dx.doi.org/10.1093/jamia/ocx079}
+  {\path{doi:10.1093/jamia/ocx079}}.
+
+\bibitem{HealthDataManagement2017}
+{HealthDataManagement}, {6 award winning FHIR application}, {Retrieved from:
+  https://www.healthdatamanagement.com/list/6-award-winning-fhir-applications
+  (access on November 2018)}.
+
+\bibitem{J.C.M2016899}
+{J.C. Mandel and D.C. Kreda and K.D. Mandl and K. Isaac and R.B. Ramoni},
+  {SMART on FHIR: A standards-based, interoperable apps platform for electronic
+  health records. }, {Journal of the American Medical Informatics Association.
+  } 23 (2016) 899--908.
+\newblock \href {http://dx.doi.org/10.1093/jamia/ocv189}
+  {\path{doi:10.1093/jamia/ocv189}}.
+
+\bibitem{J.Ellis2018}
+{J. Ellis}, {The evolution of schema in Cassandra}, {DataStax. Retrieved from:
+  https://www.datastax.com/dev/blog/schema-in-cassandra-1-1 (accessed on
+  November 2018)}.
+
+\bibitem{S.Wang2013268}
+{S. Wang and Y. Man and T. Zhang and T.J. Wong and I. King}, {Data management
+  with flexible and extensible data schema in CLANS }, {Procedia Computer
+  Science} 24 (2013) 268--273.
+\newblock \href {http://dx.doi.org/10.1016/j.procs.2013.10.050}
+  {\path{doi:10.1016/j.procs.2013.10.050}}.
+
+\bibitem{N.Ramachandran2016}
+{N. Ramachandran and W.K. Wong and I. McNicoll}, {Healthcare Data Issues -
+  Internal Data Modelling, Data Transfer, Data Model vs Dataset}, {Retrieved
+  from: http://opencancer.net (accessed on April 2018)}.
 
 \end{thebibliography}
