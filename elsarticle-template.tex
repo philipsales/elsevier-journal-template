@@ -90,19 +90,17 @@
 
 \paragraph{Background and objective:} The field of healthcare is rapidly accumulating data of complex types and formats. 
 The current methods of storing data relies heavily on traditional relational database management system (RDBMS) which have notable limitations 
-in managing clinical and biomedical data. Thus, a constant demand for alternative modeling approaches are in place. NoSQL databases had gained 
-market tractions and had been cited as a viable solution due to its numerous benefits; however, there are few published studies regarding 
-the evaluation of NoSQL for health information systems (HIS). 
+in managing clinical and biomedical data. Thus, a constant demand for alternative approach is in place. 
+Among the available solutions, NoSQL databases had been cited as a viable option due to its numerous advantages in handling healthcare data challenges. 
 
-\paragraph{Methods:} This paper adapted an evaluation framework with application-specific and context-based parameters for comparing 
-different types NoSQL databases.
+\paragraph{Methods:} This study evaluated different types of NoSQL databases using an database evaluation framework tailored for healthcare context.
 
-\paragraph{Results:} The results showed that document-based NoSQL database is the best choice for extensibility, flexibility, and query 
+\paragraph{Results:} The application-specific evaluation criteria showed that document-based type is the best choice for extensibility, flexibility, and query 
 readability whereas key-value pair is the most efficient in performance and scalability. Moreover, columnar-wide has the edge in 
 storage capacity. 
 
 \paragraph{Conclusion:} Among the shortlisted databases, MongoDB - a document type NoSQL was found to be the recommended choice for the current implementation 
-and immediate need of the biobanking HIS.
+and immediate need of the biobank information system.
 
 \end{abstract}
 
@@ -122,10 +120,10 @@ The increasing size and complexity of data being generated in healthcare industr
  of collecting and storing data to benefit clinical research and medical services.
 
 Currently, storage of clinical data largely relies on relational database management systems 
-\cite{Z.Goli-Malekabadi201675,K.Lee201299} and has since been the most common approach of data 
+\cite{Z.Goli-Malekabadi201675,K.Lee201299} and has been the most common approach of data 
 storage since the 90’s \cite{P.Atzeni1993}. From the time of its origins in the 1970’s, the relational 
 model had been adapted widely in many database management system \cite{K.Berg201329,D.Suciu200139}, and 
-since then had remained unchanged for decades \cite{M.Ercan190510}. This modeling approach had become the de 
+had remained unchanged for decades \cite{M.Ercan190510}. This modeling approach had become the de 
 facto standard for most industries, but remains ineffective in the field of healthcare due to the characteristics
  of clinical and biomedical data.
 
@@ -135,55 +133,55 @@ or unstructured presentation \cite{M.Ercan190510,K.Lee201299,C.S.Kruse201638,S.W
 The heterogeneity of formats, increasing volume, and dynamic structure makes it difficult to model and manage health 
 data using the traditional relational database \cite{K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288}.
 
-In addition, one of the major drawback of relational databases is the need for pre-designed schema. The problem of pre-defining
-data structure is the fact that it is unrealistic to pre-determine all the variety of data fields to be collected in a medical record \cite{K.Lee201299}. 
+In addition, one of the major drawback of relational database is the need for pre-designed schema. 
+Predefining the data structure is impractical since pre-determing the combination and variety of data fields to be collected in a medical record is unrealistic \cite{K.Lee201299}. 
+%The issue of pre-defining data structure is the fact that it is unrealistic to pre-determine all the variety of data fields to be collected in a medical form much less a clinical record \cite{K.Lee201299}. 
 
-The database management system of any health information system (HIS) must be flexible to accommodate constant changes in data requirements. 
-Consequences of not updating data schema may cause failure to capture the additional information, whilst an attempt to restructure
-may mean additional maintenance upkeep which in turn is time consuming and expensive that eventually leads to operational disturbance, 
-dissatisfied staff, loss of business, or even impractical for some organization \cite{H.Al-Fatlawi2015122,V.Manoj201411,J.Gilchrist20113244}. 
-
-Succintly, the conventional relational database management system is not flexible, scalable, and extensible enough to overcome the problem of 
-ever-changing requirements, heterogeneity, increasing volume, and the continuous need for updates of healthcare data \cite{Z.Goli-Malekabadi201675,K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288}.
+Succintly, RDBMS is not flexible, scalable, and extensible to overcome the problem of constant changing requirements, heterogenous formats, increasing volume, and the continuous need for updates in healthcare data \cite{Z.Goli-Malekabadi201675,K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288}.
 
 Against these backdrops, there is a constant demand and practical need for alternatives outside the conventional relational data modeling approach. 
-Additionally, there are increasing researches and industry projects on alternative databases that are driven by the practical experience of the conflicting static 
+As evidence there are increasing researches and industry projects on alternative databases that are driven by the practical experience of the conflicting static 
 nature of relational database and dynamic characteristics of healthcare data \cite{M.Ercan190510}.
-
-\section{Background}
-\subsection{Project Context}
-Establishing that relational database have notable limitations in handling nature of healthcare data \cite{Z.Goli-Malekabadi201675,K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288} is one thing. 
-Proposing an alternative solution that undergoes a systematic way of evaluation is another. The latter is the undertaking that this paper aimed to address.
-
-In relation to Philippine scenario, one of the initiative of Philippine-California Advanced Research Institutes (PCARI) Project is to implement 
-of Philippine Cancer Phenome-Biobanking System. The development of this pilot project will serve as a model HIS with optimism 
-of going national scale. The data challenges mentioned are applicable to the context of the biobanking system. 
-Critical for the success of the system is the appropriate evaluation and selection of data modelling approach and database technology.
 
 Out of the wide spectrum of viable alternatives, this study identified NoSQL database as supported by literature to be suitable in addressing the challenges of 
 healthcare data. NoSQL approach had attracted the attention of non-clinical industries \cite{C.S.Kruse201638,Z.Parker20131,G.D.Ferreira2013125} and researchers 
 due to its flexibility, scalability, velocity, and availability which addresses the limitations of relational databases \cite{M.Ercan190510}. 
-While there are significant advantages of using NoSQL database, there is limited research which has evaluated the use of NoSQL databases in the healthcare domain 
-particularly with the use of Health Level 7 - Fast Health Interoperability Resource (HL7-FHIR) formatted data. 
+While there are significant advantages of using NoSQL database, there is limited research which has evaluated the use of NoSQL databases in the healthcare domain.
 
-Additionally, it is not always straightforward to declare which database type is better than the other. Concerns are raise in selecting which among 
-the list of 225 NoSQL databases \cite{S.Edlich2018} can best address the healthcare data challenge. Literature gap exist in determining what database evaluation framework can be used as
-reference when developing a health information systems (HIS) or more particularly a biobank information system.
+Additionally, it is not always straightforward to declare which database type is better than the other. Concerns are raised in selecting which among the list of 225 NoSQL databases \cite{S.Edlich2018} 
+can best address the healthcare data challenge. To date, there is a paucity of literature that provides guiding principle, standard protocol, or framework on how to
+evaluate of database for healthcare industry.
+
+In light of the foregoing, this study attempted to evaluate different NoSQL databases using application-specific evaluation criteria. 
+
+The sections below are organized as follows.
+Section 2 offers an overview on different approaches to handle and maintain big data such as health data. 
+Section 3 describes the nature of health data and presents appropriate model for it.
+The performances of former and new model are discussed in section 4. 
+Subsequently, a conclusion is given in section 5.
+
+\section{Background}
+\subsection{Project Context}
+Establishing that relational database have notable limitations in managing the nature of healthcare data \cite{Z.Goli-Malekabadi201675,K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288} is one thing. 
+Proposing an alternative solution that undergoes a systematic way of evaluation is another. The latter is the undertaking that this paper aimed to implement.
+
+In relation to Philippine scenario, one of the initiative of Philippine-California Advanced Research Institutes (PCARI) Project is to implement 
+of Philippine Cancer Phenome-Biobanking System. The development of this pilot project will serve as a model HIS with optimism 
+of going national scale. The data challenges mentioned are applicable to the context of the biobank information system. 
+Critical to the success of the system is the appropriate evaluation and selection of data modelling approach and database technology.
+
 
 Technology selection or evaluation framework are constructs predominantly used in the field of business sectors with focus only upon management and financial 
 decisions \cite{C.Chan2010300}, but dearth of source exists when discussing technology or database evaluation for healthcare sector. Moreover, most selection 
 practices and evaluation models in digital health technologies are informed by traditional means: word of mouth, internet search, consultant’s advice, expert’s opinion \cite{A.Ostrovsky20141}, 
-emerging systems, and technology trend. There are limited models, empirical evidences, and guidelines that facilitate methodological evaluation of database for HIS.
+emerging systems, and technology trend. There are limited models, empirical evidences, and guidelines that facilitate methodological evaluation of database for HIS. 
 
-In light of the foregoing, this study attempted to implement a systematic way of evaluating the databases. To date, there is a paucity of literature that provides guiding principle,
-standard protocol, or framework on how to evaluate of database for healthcare domain.  Therefore, this study will adapt a framework that will evaluate how different 
-databases are at par with each other and against application-specific and context-based evaluation criteria. 
+Thus, this paper adapted a database evaluation framework that will evaluate NoSQL databases against context-based parameters. 
 
 \subsection{Evaluation Approach}
-The evaluation framework in this study is inspired from Digital Selection Framework (DSF) \cite{A.Ostrovsky20141} 
-and Technology Selection Framework for Health Interventions (TSF) \cite{C.Chan2010300}. 
-The method combines the key principles from the themes of TSF and the context-driven component evaluation process of DHSF.  
-The aim of this approach is to provide reproducible and reusable process in evaluating database that can address application-specific healthcare data requirements.
+The principles of of this study's evaluation framework is inspired from themes of Digital Selection Framework \cite{A.Ostrovsky20141} 
+and the context-driven component evaluation process of Technology Selection Framework for Health Interventions \cite{C.Chan2010300}. 
+The aim is to provide reproducible and reusable process in evaluating database that can address application-specific healthcare data requirements.
 The main steps are illustrated in Figure \ref{fig.framework} and outlined below. 
 
 \begin{figure*}[ht]
@@ -193,11 +191,19 @@ The main steps are illustrated in Figure \ref{fig.framework} and outlined below.
 \end{figure*}
 
 \begin{enumerate}
-\item \emph{Identifying the scope of the HIS}. In the context of the aforementioned project, this study evaluated the database of choice for a bio specimen inventory and clinical registry type of health information system. The nature of the required system is not transaction intensive but rather storage and reporting exhaustive. With these considerations, the study anticipated the need for a database that can handle voluminous, various, and historical data.
-\item \emph{Gathering user requirements from stakeholders.} Qualitative methods were used to elicit information on the use case of the HIS. FGD and key informant interview of the stakeholders are pre-requisites for the development of the evaluation criteria. The method of consulting the health care providers and allied professionals prioritizes human need over technology solution.
+\item \emph{Identifying the scope of the HIS}. In the context of the aforementioned project, this study evaluated the database of choice for a biological specimen inventory and clinical registry type of health information system. The nature of the required system is not transaction intensive but rather storage and reporting exhaustive. With these considerations, the study anticipated the need for a database that can handle voluminous and aggregatable data.
+\item \emph{Gathering requirements from stakeholders.} Multiple sessions of focus group discussions and key informant interviews were done as method of elicitation for the quality attribute scenarios, use cases, and business requirements. 
+Information gathered served as the basis for the the development of the evaluation criteria. 
+This method of consulting the health and allied professionals prioritizes clinical centered need over technology oriented solution.
 \item \emph{Formulating the evaluation criteria.} The consolidated and prioritized criteria elicited from the qualitative approach was used as the basis on how the execution of tests was performed. Thus, the findings of this research was context based and can be qualified as a case study. Moreover, the methods applied are generalizable to other HIS database evaluation.
-\item \emph{Shortlisting database technology.} On the grounds that the nature of clinical data is highly evolving and dynamic, one of the immediate selection filters is the capability to adapt to schema changes. As a result, focus on schema-less design approach was the logical option and exclusivity to the four types of NoSQL was the scope of the study.
-\item \emph{Model mapping of datasets.} Each database technology has corresponding physical data model and underlying technical requirements that need to be configured prior to the actual storage of the datasets. In using the FHIR standard, schema mapping of the clinical dataset into the physical data storage of each database was implemented.
+\item \emph{Shortlisting database technology.} On the grounds that the nature of clinical data is highly evolving and dynamic, one of the immediate selection filters is the capability to adapt to schema changes. In consequence, schema-less modelling approach was the logical option; hence, focus on NoSQL was the scope of the implementation. 
+This study evaluated only the highly represented and most popular database for each type of the NoSQL category \cite{DBEnginesRanking2018}.
+The selected NoSQL databases are MongoDB for the document category, Cassandra for the columnar, and Redis for the key-value.
+This paper presented the three different NoSQL types: document based
+\item \emph{Model mapping of datasets.} 
+Adhering to a clinical information modeling standard enforces the data to be formatted in a semi-structured or structured form making it computable processable searchable, and processable (Weglarz, 2004).
+
+Each database technology has corresponding physical data model and underlying technical requirements that need to be configured prior to the actual loading of the datasets. In using the FHIR standard, schema mapping of the clinical dataset into the physical data storage of each database was implemented.
 \item \emph{Executing test scripts against evaluation criteria.} The test scripts were fundamentally derived from the evaluation criteria. Each script was executed multiple times against different workloads on several dataset sizes in different testing configurations to allow rigorous comparison amongst each selected database.
 \item \emph{Provide summary of reports and insights.} Summary of results were shown on each enumerated evaluation criteria.
 \end{enumerate}
@@ -279,7 +285,7 @@ For the environment deployment, the study used Linode Cloud Servers as the third
 All working versions (see Table \ref{table.cloud.environment}) like the database test client (YCSB), patient mass generator, NoSQL databases, 
 and operating system for the server instance were kept identical to provide consistency. 
 
-\begin{table}[!ht]
+\begin{table}[ht]
     \centering
     \caption{Parameters for Testing Environment}
      \label{table.cloud.environment}
@@ -304,7 +310,7 @@ Furthermore, each cloud instance servers were set-up under the following specifi
 
 NoSQL databases is in a rapidly innovative landscape with currently having 225 \cite{S.Edlich2018} and continuously increasing; 
 it is important to note that the following versions were installed in the instance Table \ref{table.technology.versions} .
-\begin{table}[!hb]
+\begin{table}[hb]
     \centering															
     \caption{Technology Specifications}
      \label{table.technology.versions}
