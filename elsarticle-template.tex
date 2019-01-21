@@ -141,19 +141,19 @@ Predefining the data structure is impractical since pre-determing the combinatio
 Succintly, RDBMS is not flexible, scalable, and extensible to overcome the problem of constantly changing requirements, various formats, increasing volume, and the continuous need for updates in healthcare data \cite{Z.Goli-Malekabadi201675,K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288}.
 
 Against these backdrops, there is a constant demand and practical need for alternatives outside the conventional relational data modeling approach. 
-As evidence there are increasing researches and industry projects on databases that are driven by the practical experience of the conflicting static 
+Consequently, there are increasing researches and industry projects on databases that are driven by the practical experience of the conflicting static 
 nature of relational database and dynamic characteristics of healthcare data \cite{M.Ercan190510}.
 
 Out of the wide spectrum of viable alternatives, this study identified NoSQL database as supported by literature to be suitable in addressing the challenges of 
-healthcare data. NoSQL approach had attracted the attention of non-clinical industries \cite{C.S.Kruse201638,Z.Parker20131,G.D.Ferreira2013125} and researchers 
-due to its flexibility, scalability, velocity, and availability which addresses the limitations of relational databases \cite{M.Ercan190510}. 
+healthcare data. NoSQL approach had attracted the attention of non-clinical industries  and researchers due to its flexibility, scalability, velocity, and 
+availability which addresses the limitations of relational databases \cite{M.Ercan190510,C.S.Kruse201638,Z.Parker20131,G.D.Ferreira2013125}.
 While there are significant advantages of using NoSQL database, there is limited research which has evaluated the use of NoSQL databases in the healthcare domain.
 
 Additionally, it is not always straightforward to declare which database type is better than the other. Concerns are raised in selecting which among the list of 225 NoSQL databases \cite{S.Edlich2018} 
 can best address the healthcare data challenge. To date, there is a paucity of literature that provides guiding principle, standard protocol, or framework on how to
 evaluate of database for healthcare industry.
 
-In light of the foregoing, this study attempted to evaluate three NoSQL database types (i.e. document based, columnar wide, key-value pair) using an systematic evaluation approach. 
+In light of the foregoing, this study attempted to evaluate three NoSQL database types (i.e. document based, columnar wide, key-value pair) using an evaluation approach that focuses on healthcare domain.
 
 The sections below are organized as follows.
 Section 2 offers an overview on research project context and the evaluation approach taken. 
@@ -167,7 +167,7 @@ Establishing that relational database have notable limitations in managing the n
 Proposing an alternative solution that undergoes a systematic way of evaluation is another. The latter is the undertaking that this paper aimed to implement.
 
 In relation to Philippine scenario, one of the initiative of Philippine-California Advanced Research Institutes (PCARI) Project is to implement 
-of Philippine Cancer Phenome-Biobanking System. The development of this pilot project will serve as a model HIS with optimism 
+of Philippine Cancer Phenome-Biobanking System. The development of this pilot project will serve as a model health information system (HIS) with optimism 
 of going national scale. The data challenges mentioned are applicable to the context of the biobank information system. 
 Critical to the success of the system is the appropriate evaluation and selection of data modelling approach and database technology.
 
@@ -180,10 +180,10 @@ emerging systems, and technology trend. There are limited models, empirical evid
 Thus, this paper adapted a database evaluation framework that will evaluate NoSQL databases against context-based parameters. 
 
 \subsection{Evaluation Approach}
-The principles of of this study's evaluation framework is inspired from themes of Digital Selection Framework \cite{A.Ostrovsky20141} 
+The principles of of this study's evaluation framework was inspired from themes of Digital Selection Framework \cite{A.Ostrovsky20141} 
 and the context-driven component evaluation process of Technology Selection Framework for Health Interventions \cite{C.Chan2010300}. 
-The aim is to provide reproducible and reusable process in evaluating database that can address application-specific healthcare data requirements.
-The main steps are illustrated in Figure \ref{fig.framework} and outlined below. 
+The aim is to provide reproducible and reusable process in evaluating database that can address healthcare data requirements.
+The steps are illustrated in Figure \ref{fig.framework} and this study's application are outlined below. 
 
 \begin{figure*}[ht]
     \centering
@@ -192,57 +192,74 @@ The main steps are illustrated in Figure \ref{fig.framework} and outlined below.
 \end{figure*}
 
 \begin{enumerate}
-\item \emph{Identifying the scope of the HIS}. In the context of the aforementioned project, this study evaluated the database of choice for a biological specimen inventory and clinical registry type of health information system. The nature of the required system is not transaction intensive but rather storage and reporting exhaustive. With these considerations, the study anticipated the need for a database that can handle voluminous and aggregatable data.
-\item \emph{Gathering requirements from stakeholders.} Multiple sessions of focus group discussions and key informant interviews were done as method of elicitation for the quality attribute scenarios, use cases, and business requirements. 
-Information gathered served as the basis for the the development of the evaluation criteria. 
-This method of consulting the health and allied professionals prioritizes clinical centered need over technology oriented solution.
-\item \emph{Formulating the evaluation criteria.} The consolidated and prioritized criteria elicited from the qualitative approach was used as the basis on how the execution of tests was performed. Thus, the findings of this research was context based and can be qualified as a case study. Moreover, the methods applied are generalizable to other HIS database evaluation.
-\item \emph{Shortlisting database technology.} On the grounds that the nature of clinical data is highly evolving and dynamic, one of the immediate selection filters is the capability to adapt to schema changes. In consequence, schema-less modelling approach was the logical option; hence, focus on NoSQL was the scope of the implementation. 
+\item \emph{Specification Scoping}. 
+Narrowing down the type of HIS is vital given that the storage, extraction, and transaction of data vary relative to the nature of the health information system and the context of its application.
+The HIS for this project is a biological specimen inventory and clinical registry type system. 
+This type of application is not transaction intensive but rather storage and reporting exhaustive. 
+With this consideration, the study anticipated the need for a database that can manage voluminous and aggregatable data.
+
+\item \emph{Clinical Contextualization.} 
+Defining the requirements within the context of a clinical domain assures that the functionalities are clinically relevant and not technology focus solutions.
+Multiple sessions of focus group discussions (FGD) and key informant interviews with the technical and allied health professionals were done as method of elicitation for this step. 
+
+\item \emph{Criteria Formulation.} 
+The study's empirical findigs is as equally important as the metrics itself. The essence of this framework is pinned around the criteria.
+This research consolidated and prioritized the functional and non-functional requirements collated from the qualitative approach to form the basis of the evaluation criteria.
+The metrics measured in this study are application specific. Nevertheless, the methods applied are generalizable to other database evaluation.
+
+\item \emph{Technology Selection.} 
+On the grounds that the nature of clinical data is highly evolving and dynamic, one of the immediate selection filters is the capability to adapt to schema changes. In consequence, schema-less modelling approach was the logical option; hence, focus on NoSQL was the scope of the implementation. 
 This study evaluated only the highly represented and most popular database for each type of the NoSQL category \cite{DBEnginesRanking2018}.
 The selected NoSQL databases are MongoDB for the document category, Cassandra for the columnar, and Redis for the key-value.
-This paper presented the three different NoSQL types: document based
-\item \emph{Model mapping of datasets.} 
-Adhering to a clinical information modeling standard enforces the data to be formatted in a semi-structured or structured form making it computable processable searchable, and processable (Weglarz, 2004).
+This paper presented the three different NoSQL types: document based, columnar wide, and key-value pair.
 
-Each database technology has corresponding physical data model and underlying technical requirements that need to be configured prior to the actual loading of the datasets. In using the FHIR standard, schema mapping of the clinical dataset into the physical data storage of each database was implemented.
-\item \emph{Executing test scripts against evaluation criteria.} The test scripts were fundamentally derived from the evaluation criteria. Each script was executed multiple times against different workloads on several dataset sizes in different testing configurations to allow rigorous comparison amongst each selected database.
-\item \emph{Provide summary of reports and insights.} Summary of results were shown on each enumerated evaluation criteria.
+\item \emph{Medical Data Preparation.} 
+The research utilized 1 million unique patient records. 
+This clinical data were in Health Level 7 - Fast Health Interoperable Resource, release Standard Trial Use 3 (HL7 - FHIR, STU3) format.
+In using this FHIR standard, schema mapping and modelling of the clinical dataset into the physical data storage of each NoSQL database type was necessary.
+This step is mandatory as each database technology has corresponding physical data model and underlying technical requirements that need to be configured prior to the actual loading of the dataset. 
+
+\item \emph{Query Implementation.} 
+The query scripts were fundamentally derived from the evaluation criteria. 
+Each criteria, if applicable, were converted into multple database query statements or scripts.
+Each script was executed multiple times against different workloads on several dataset sizes in different testing configurations to allow rigorous comparison amongst each selected database.
+
+\item \emph{Results Interpretation.} 
+Summary of results were displayed tabular or graphical presentation showing the comparison of each NoSQL types against the identified evaluation criteria.
 \end{enumerate}
 
 \section{Method}
 
-\subsection{Application-Specific Criteria}
-At the end of stakeholders’ group discussions, it was reviewed and found that there were 14 scenarios critical for the biobank system. These scenarios were enumerated then refined into a more verbose description following the QAS template format. Using the identified QAS, further verification with the product champions resulted in a list of 67 functionalities that covers the system’s core features. These functionalities where then grouped into criteria (as seen in table below) and tagged if the functionality is relevant to database operations. The list below is composed of nine (9) criteria that were initially formulated, of which four were excluded as these were not directly related to data storage, with the exception to redundancy criterion. The omission of redundancy was made on the basis of the project scope that is within the researcher’s capacity to implement in the given timeline of the research. Additionally, the last criteria (i.e. query readability) was included as advised by the research panel members.
+\subsection{Evaluation Criteria}
 
-\subsection{Clinical data using HL7-FHIR}
-Having clinical dataset formatted in standard medical information modeling is advantageous in order to simulate the variety, nature, and characteristics of the healthcare data. 
-The immediate benefits of adhering to a clinical information modeling standard is the enforcement of the data 
-to be formatted in a semi-structured or structured form making it machine processable \cite{G.Weglarz200419} and searchable.
+The data gathered from stakeholders' discussions and interviews were translated into quality attribute scenarios (QAS), functionality lists, use cases, business requirements, and software specifications.
+Following the guidelines of QAS workshop set by Barbacci (2003) \cite{M.R.Barbacci2003} and further prioritizing the functionality lists 
+resulted into the the following evaluation criteria: performance, scalability, storage, readability, flexibility, and extensibility
 
-All clinical data in this study were synthetically produced using an open-source data generator called
-Synthea. This tool is a publicly available synthetic mass patient record generator was started by the MITRE Corporation as
-part the Standard Health Record Collaborative (SHRC) program \cite{J.Walonoski2018230}. 
-The goal of Synthea is to create synthetic data that is both high-quality and realistically capable of yielding patient health 
-records using demographic and statistical disease prevalence model. This award winning \cite{HealthDataManagement2017} tool
-is used as the primary dataset generation toolkit for FHIR, C-CDA, or CSV formatted data \cite{J.C.M2016899}.
+\subsection{Clinical Datasets in HL7-FHIR}
+Medical data formatted in standard information modeling ensures interoperability, compatibility \cite{K.Lee201299}, and conceptual normalization.
+Further, data prepared in a structured form enhances machine processability and searchability \cite{G.Weglarz200419}.
 
-The generated Synthea files can be outputted in multiple format including the C-CDA, comma separated value (CSV), and FHIR structure. 
-The latter comes in various versions like v.3.5.0 (R4), v.3.0.1 (STU3), and v.1.0.2 (DSTU2). At the time of writing, 
-the study used the STU3 version as it is the FHIR official release. The FHIR structural format is based on a modular components called “Resources” 
-and is the most granular unit of interoperability. The principle of modularity enables the resource to be logically 
-exchanged and consumed by external systems either as a standalone or as bundled and combined with other resources. 
+For this study, the dataset used were structured in HL7-FHIR STU3 standard. 
+Using FHIR specification enforces the use of modular components called "resources".
+The principle of modularity enables the resource to be logically exchanged and consumed by external systems either as a standalone or bundled resources. 
 
-In this study, only 3 out of the 12 different resources; namely, patient, condition, and diagnostic report resources were filtered, logically mapped,
-and stored separately as column, buckets, or collections in the physical data model of each selected database. 
-The other resources that are bundled in the raw data were parsed and excluded. For the detailed data modelling and transformation discussion, 
-see Section 4.5.
-These resources are sufficient to test the evaluation criteria that directly involves basic database operations such as create, read, update, delete. 
-The inclusion is due to the fact that the nature of the HIS being assessed in this study is only a clinical registry and specimen repository.
-Database transactions of these type of applications mainly revolve around storage and retrieval of patient’s clinical personal identifiable information,
-diagnosis or condition, diagnostics reports, and procedures. Hence, these resources are the bare minimum to meet the requirements.
-The selected resources were further profiled, the following are the data characteristics of the resources:
+The FHIR clinical datasets were synthetically produced using an open-source generator called Synthea. 
+This award winning \cite{HealthDataManagement2017} synthetic patient record generator was started by the MITRE Corporation as
+part the Standard Health Record Collaborative program \cite{J.Walonoski2018230}. 
+The goal of the tool is to create synthetic data that is both high-quality and realistically capable of yielding patient health records using demographic and statistical disease prevalence model. 
+Synthea is used as the primary clinical dataset generation toolkit \cite{J.C.M2016899} and is capable of producing both FHIR and Clinical Document Architecture (CDA) formats \cite{J.Walonoski2018230}
 
-Table \ref{table.dataset.composition} below shows the compositional characteristics of the clinical data generated by the script. 
+
+Out of the 12 available resources in Synthea, only 3 resources namely: patient, condition, and diagnostic report were filtered, mapped,
+and stored separately in the physical data model of each selected database. 
+The other resources that were bundled with the raw data were parsed and excluded. 
+
+These resources are sufficient to test the evaluation criteria that directly involves basic functions such as insert, upsert, scan, read, update, and delete. 
+The database operations of clinical registry and specimen repository mainly revolve around storage and retrieval of patient’s clinical personal identifiable information,
+diagnosis, conditions, diagnostic reports, and procedures. Hence, these resources are the bare minimum to meet the requirements of biobank HIS.
+The selected resources data composition are shown in Table \ref{table.dataset.composition} below.
+
 
 \begin{table}[!hbp]
     \centering
@@ -250,7 +267,7 @@ Table \ref{table.dataset.composition} below shows the compositional characterist
      \label{table.dataset.composition}
         \begin{tabular}{lrr}
         \toprule
-        FHIR Resource & Number of Records & \makecell[c]{Average size \\per record} \\
+        Resource Type & \makecell[c]{Number of \\unique records}& \makecell[c]{Average size \\per record} \\
         \hline
         Patient           & 1,000,000 & 3,980 bytes \\
         Condition         & 5,430,000 & 5,000 bytes \\
@@ -261,7 +278,10 @@ Table \ref{table.dataset.composition} below shows the compositional characterist
 
 
 \subsection{NoSQL data modelling}
-\paragraph{} \noindent Though the output generated by Synthea is in JSON format, the logical approach for each selected database must be taken into account considering that each database has diverging concepts on how information should be stored. For instance, since Redis is a key value pair, the raw JSON must be transformed to represent a key-value notation. The section below describes how the datasets were mapped according to each database design principle with respect to the modularity of the FHIR resources.
+Considering that each NoSQL type has different approach on how data is stored,
+a series of modelling, mapping, and text manipulation processes were taken to satisfy the physical data model prerequisites of each database. 
+For instance, since Redis follows a key-value convention, the dataset must be transformed to represent a key-value notation. 
+The section below describes how the datasets were mapped according to each database technical requirement. 
 
 \begin{enumerate}
 \item \emph{MongoDB} stores data into collections of JSON documents. A collection is the technical equivalent of a RDBMS table, it exists within a single database and may contain single or multiple documents. A document, on the other hand is the row equivalent in relational database parlance. It is the most basic unit of data in MongoDB. It can contain flattened JSON objects with simple name-value pair, or a deeply nested nature containing multiple embedded or referenced documents. The document-oriented approach allows for the aggregation and nesting of related data via arrays and subdocuments within a single document, easily accommodating the denormalization necessary to eliminate the joins characteristic of relational database queries (Klein, et.al, 2015). The MongoDB schema in this study consists of a single database named “fhir” and multiple collections called “patient”, “procedure”, “diagnosticreport”, and “condition”. The 1 million patient records were parsed according to the FHIR resource it contained, and were stored into its corresponding collections. Figure 6.1 below shows the mapping of the raw FHIR Patient resource into the MongoDB document-oriented approach. 
@@ -279,8 +299,10 @@ The one-to-many relationship between patient and condition, and diagnostic repor
 
 
 \subsection{Testing and Prototyping}
-The measurement of performance evaluation was conducted in a cloud based computing environment. To ensure consistency of measurement and isolation of extraneous variables that may impact database performance, it is imperative that this study made use of a mature, properly documented, well cited, and the de facto database testing client. Yahoo! Cloud Serving Benchmarking (YCSB) was chosen as the open source testing client for comparative evaluation of the data stores. It is the leading choice and industry-standard for performance benchmarking of cloud based databases (Patil, et.al, 2011).
+To ensure consistency of measurement and isolation of extraneous variables that may impact the evaluation results, it is imperative that this study made use of a mature, properly documented, well cited, and the de facto database testing client. Yahoo! Cloud Serving Benchmarking (YCSB) was chosen as the open source testing client for comparative evaluation of the data stores. It is the leading choice and industry-standard for performance benchmarking of cloud based databases (Patil, et.al, 2011).
 YCSB is an internal research and development project of Yahoo! that was open-sourced in 2010 in order to reach a wider community (Cooper, 2010). It has two main components: First, it contains various interfaces, integration drivers, connectors, libraries, and processes for a number of databases. At the time of writing, YCSB has over forty-six (46) database interfaces currently available for testing. And, YCSB also allows addition of other databases that are not currently included in the list. Lastly, YCSB has generic workloads and reporting framework which are extensible libraries that manages the execution of the different types of database task and the output of the reporting format.
+
+The measurement of performance evaluation was conducted in a cloud based computing environment. 
 
 For the environment deployment, the study used Linode Cloud Servers as the third-party cloud provider. 
 All working versions (see Table \ref{table.cloud.environment}) like the database test client (YCSB), patient mass generator, NoSQL databases, 

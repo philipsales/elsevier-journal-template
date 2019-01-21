@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex elsarticle-template"] 1548046446 "elsarticle-template.aux" "elsarticle-template.bbl" "elsarticle-template" 1548046446
+["bibtex elsarticle-template"] 1548075402 "elsarticle-template.aux" "elsarticle-template.bbl" "elsarticle-template" 1548075402
   "./elsarticle-num.bst" 1261020940 29353 cbd593ca59c003368735a9d8dbd22298 ""
-  "elsarticle-template.aux" 1548046445 10891 fa4d9e534a10dcefe078bd08bffb353c ""
-  "mybibfile.bib" 1546871946 13261 90e5a75da08c4b25f897b28e3acb93d6 ""
+  "elsarticle-template.aux" 1548075401 10873 91d71a16c804a1534e870dfad2bb99fa ""
+  "mybibfile.bib" 1548053953 13635 d81d43234c1f9d36a2aa22df6039d15c ""
   (generated)
-  "elsarticle-template.bbl"
   "elsarticle-template.blg"
-["pdflatex"] 1548046444 "/Users/ghost/src/latex/elsarticle-template/elsarticle-template.tex" "elsarticle-template.pdf" "elsarticle-template" 1548046444
-  "/Users/ghost/src/latex/elsarticle-template/elsarticle-template.tex" 1548046441 44388 4bd46166d058ce19e232373993f39e96 ""
+  "elsarticle-template.bbl"
+["pdflatex"] 1548075400 "/Users/ghost/src/latex/elsarticle-template/elsarticle-template.tex" "elsarticle-template.pdf" "elsarticle-template" 1548075400
+  "/Users/ghost/src/latex/elsarticle-template/elsarticle-template.tex" 1548075400 43355 12059eea27c2a76ad496e32521867319 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1480098689 1408 5937f58aa508ea2cea4901c07d10f5fe ""
   "/usr/local/texlive/2018/texmf-dist/fonts/tfm/adobe/zapfding/pzdr.tfm" 1480098689 1528 f853c4d1b4e0550255e02831fdc8496f ""
@@ -82,10 +82,10 @@
   "/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1523934492 2717033 f61a5287d9c22a39a74f1979fe3f905c ""
   "/usr/local/texlive/2018/texmf-var/web2c/pdftex/pdflatex.fmt" 1523934516 4220280 10cab8fbd7c5a7c52aba9917e190d018 ""
   "/usr/local/texlive/2018/texmf.cnf" 1523934483 577 0b39adfd7c93507ff20c9c14c2f1a33f ""
-  "elsarticle-template.aux" 1548046444 8 a94a2480d3289e625eea47cd1b285758 ""
+  "elsarticle-template.aux" 1548075400 8 a94a2480d3289e625eea47cd1b285758 ""
   "elsarticle-template.bbl" 0 -1 0 "bibtex elsarticle-template"
   "elsarticle-template.spl" 0 -1 0 ""
-  "elsarticle-template.tex" 1548046441 44388 4bd46166d058ce19e232373993f39e96 ""
+  "elsarticle-template.tex" 1548075400 43355 12059eea27c2a76ad496e32521867319 ""
   "figure.png" 1546531814 246046 73fa52fc913d5e0d36b26fb41c04b2f9 ""
   "images/performance/workloada.png" 1546587261 26012 fa25295524ac379b410d105c6f100ad7 ""
   "images/performance/workloadb.png" 1546587261 27225 f9788b69a15e3c1bb2a57af742153d00 ""
@@ -98,7 +98,7 @@
   "images/scalability/workloade.png" 1544526055 28018 dc282f60110b73cf60f174c869546ffe ""
   "images/scalability/workloadf.png" 1544526057 24870 50a1bc6b263635a822e60ae6ffee9e05 ""
   (generated)
-  "elsarticle-template.aux"
-  "elsarticle-template.log"
   "elsarticle-template.spl"
+  "elsarticle-template.aux"
   "elsarticle-template.pdf"
+  "elsarticle-template.log"

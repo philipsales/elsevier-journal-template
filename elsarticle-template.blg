@@ -3,48 +3,47 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: elsarticle-template.aux
 The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
-Warning--entry type for "N.Ramachandran2016" isn't style-file defined
---line 803 of file mybibfile.bib
 Warning--entry type for "S.Edlich2018" isn't style-file defined
---line 817 of file mybibfile.bib
+--line 843 of file mybibfile.bib
 Warning--entry type for "J.Ellis2018" isn't style-file defined
---line 831 of file mybibfile.bib
+--line 857 of file mybibfile.bib
 Warning--entry type for "HealthDataManagement2017" isn't style-file defined
---line 845 of file mybibfile.bib
+--line 871 of file mybibfile.bib
 Warning--entry type for "DBEnginesRanking2018" isn't style-file defined
---line 859 of file mybibfile.bib
+--line 885 of file mybibfile.bib
+Warning--I didn't find a database entry for "N.Ramachandran2016"
 You've used 26 entries,
             2937 wiz_defined-function locations,
-            866 strings with 10648 characters,
-and the built_in function-call counts, 7125 in all, are:
-= -- 728
+            870 strings with 10700 characters,
+and the built_in function-call counts, 7107 in all, are:
+= -- 727
 > -- 104
 < -- 5
 + -- 52
 - -- 26
-* -- 439
-:= -- 902
+* -- 438
+:= -- 905
 add.period$ -- 40
 call.type$ -- 26
 change.case$ -- 26
 chr.to.int$ -- 0
 cite$ -- 26
-duplicate$ -- 235
-empty$ -- 884
+duplicate$ -- 233
+empty$ -- 878
 format.name$ -- 26
-if$ -- 1907
+if$ -- 1901
 int.to.chr$ -- 0
 int.to.str$ -- 26
-missing$ -- 21
+missing$ -- 22
 newline$ -- 100
 num.names$ -- 26
-pop$ -- 166
+pop$ -- 162
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 524
 stack$ -- 0
-substring$ -- 414
+substring$ -- 412
 swap$ -- 79
 text.length$ -- 5
 text.prefix$ -- 0

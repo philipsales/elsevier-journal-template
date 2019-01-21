@@ -118,9 +118,19 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
 {DB-Engines Ranking}, {Database ranking}, {Retrieved from:
   https://db-engines.com/en/ranking (access on May 2018)}.
 
+\bibitem{M.R.Barbacci2003}
+{ M.R. Barbacci and R. Ellison and A.J. Lattanze and J.A. Stafford and C.B.
+  Weinstock and W.G. Wood }, {Quality Attribute Workshop, Third Edition},
+  {Software Engineering Institute}.
+
 \bibitem{G.Weglarz200419}
 {G. Weglarz}, {Two worlds of data – unstructured and structured }, {DM
   Review} 14 (2004) 19--22.
+
+\bibitem{HealthDataManagement2017}
+{HealthDataManagement}, {6 award winning FHIR application}, {Retrieved from:
+  https://www.healthdatamanagement.com/list/6-award-winning-fhir-applications
+  (access on November 2018)}.
 
 \bibitem{J.Walonoski2018230}
 {J. Walonoski and M. Kramer and J. Nichols and A. Quina and C. Moesel and D.
@@ -130,11 +140,6 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
   Medical Informatics Association} 25 (2018) 230--238.
 \newblock \href {http://dx.doi.org/10.1093/jamia/ocx079}
   {\path{doi:10.1093/jamia/ocx079}}.
-
-\bibitem{HealthDataManagement2017}
-{HealthDataManagement}, {6 award winning FHIR application}, {Retrieved from:
-  https://www.healthdatamanagement.com/list/6-award-winning-fhir-applications
-  (access on November 2018)}.
 
 \bibitem{J.C.M2016899}
 {J.C. Mandel and D.C. Kreda and K.D. Mandl and K. Isaac and R.B. Ramoni},
@@ -155,10 +160,5 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
   Science} 24 (2013) 268--273.
 \newblock \href {http://dx.doi.org/10.1016/j.procs.2013.10.050}
   {\path{doi:10.1016/j.procs.2013.10.050}}.
-
-\bibitem{N.Ramachandran2016}
-{N. Ramachandran and W.K. Wong and I. McNicoll}, {Healthcare Data Issues -
-  Internal Data Modelling, Data Transfer, Data Model vs Dataset}, {Retrieved
-  from: http://opencancer.net (accessed on April 2018)}.
 
 \end{thebibliography}
