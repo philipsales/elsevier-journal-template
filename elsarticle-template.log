@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  21 JAN 2019 12:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  21 JAN 2019 12:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/ghost/src/latex/elsarticle-template/elsarticle-template.tex
+**/Users/ghost/src/latex/elsarticle-template/elsarticle-template
 (/Users/ghost/src/latex/elsarticle-template/elsarticle-template.tex
 LaTeX2e <2018-04-01> patch level 2
 Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
@@ -264,7 +264,12 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \@thisruleclass=\count121
 \@lastruleclass=\count122
 \@thisrulewidth=\dimen141
-) (/usr/local/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
+) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bookmark.sty
+Package: bookmark 2016/05/17 v1.26 PDF bookmarks (HO)
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
+File: bkm-pdftex.def 2016/05/17 v1.26 bookmark driver for pdfTeX (HO)
+\BKM@id=\count123
+)) (/usr/local/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
  (/usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
 Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
@@ -277,37 +282,37 @@ Package: array 2018/04/07 v2.4g Tabular extension package (FMi)
 \ar@cellbox=\box32
 )
 \rotheadsize=\dimen144
-\c@nlinenum=\count123
+\c@nlinenum=\count124
 \TeXr@lab=\toks20
 ) (./elsarticle-template.aux)
 \openout1 = `elsarticle-template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 53.
-LaTeX Font Info:    ... okay on input line 53.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
+LaTeX Font Info:    ... okay on input line 54.
  (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count124
+\scratchcounter=\count125
 \scratchdimen=\dimen145
 \scratchbox=\box33
-\nofMPsegments=\count125
-\nofMParguments=\count126
+\nofMPsegments=\count126
+\nofMParguments=\count127
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count127
+\MPscratchCnt=\count128
 \MPscratchDim=\dimen146
-\MPnumerator=\count128
-\makeMPintoPDFobject=\count129
+\MPnumerator=\count129
+\makeMPintoPDFobject=\count130
 \everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -358,347 +363,178 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 53.
+Package hyperref Info: Link coloring OFF on input line 54.
 (/usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
  (/usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count130
+\c@section@level=\count131
 )
-LaTeX Info: Redefining \ref on input line 53.
-LaTeX Info: Redefining \pageref on input line 53.
-LaTeX Info: Redefining \nameref on input line 53.
-\@outlinefile=\write4
-\openout4 = `elsarticle-template.out'.
-
+LaTeX Info: Redefining \ref on input line 54.
+LaTeX Info: Redefining \pageref on input line 54.
+LaTeX Info: Redefining \nameref on input line 54.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 112.
+(Font)              <7> on input line 113.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 112.
+(Font)              <5> on input line 113.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 112.
+(Font)              <8> on input line 113.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 112.
-
-
-Package natbib Warning: Citation `R.Kumar2015208' on page 1 undefined on input line 118.
-
-
-Package natbib Warning: Citation `M.Ercan190510' on page 1 undefined on input line 118.
-
-
-Package natbib Warning: Citation `Z.Goli-Malekabadi201675' on page 1 undefined on input line 123.
-
-
-Package natbib Warning: Citation `K.Lee201299' on page 1 undefined on input line 123.
-
-
-Package natbib Warning: Citation `P.Atzeni1993' on page 1 undefined on input line 124.
-
-
-Package natbib Warning: Citation `K.Berg201329' on page 1 undefined on input line 125.
-
-
-Package natbib Warning: Citation `D.Suciu200139' on page 1 undefined on input line 125.
-
-
-Package natbib Warning: Citation `M.Ercan190510' on page 1 undefined on input line 126.
-
-
-Package natbib Warning: Citation `M.Ercan190510' on page 1 undefined on input line 132.
-
-
-Package natbib Warning: Citation `K.Lee201299' on page 1 undefined on input line 132.
-
-
-Package natbib Warning: Citation `C.S.Kruse201638' on page 1 undefined on input line 132.
-
-
-Package natbib Warning: Citation `S.White201413' on page 1 undefined on input line 132.
-
-
-Package natbib Warning: Citation `S.Wasan1192016' on page 1 undefined on input line 132.
-
-
-Package natbib Warning: Citation `K.Lee201299' on page 1 undefined on input line 134.
-
-
-Package natbib Warning: Citation `H.Al-Fatlawi2015122' on page 1 undefined on input line 134.
-
-
-Package natbib Warning: Citation `O.Schmitt20121' on page 1 undefined on input line 134.
-
-
-Package natbib Warning: Citation `Y.Jin2011288' on page 1 undefined on input line 134.
-
-
-Package natbib Warning: Citation `K.Lee201299' on page 1 undefined on input line 137.
-
-
-Package natbib Warning: Citation `Z.Goli-Malekabadi201675' on page 1 undefined on input line 140.
-
-
-Package natbib Warning: Citation `K.Lee201299' on page 1 undefined on input line 140.
-
-
-Package natbib Warning: Citation `H.Al-Fatlawi2015122' on page 1 undefined on input line 140.
-
-
-Package natbib Warning: Citation `O.Schmitt20121' on page 1 undefined on input line 140.
-
-
-Package natbib Warning: Citation `Y.Jin2011288' on page 1 undefined on input line 140.
-
-
-Package natbib Warning: Citation `M.Ercan190510' on page 1 undefined on input line 144.
-
-[1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+(Font)              <6> on input line 113.
+ [1{/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 ]
-
-Package natbib Warning: Citation `C.S.Kruse201638' on page 2 undefined on input line 147.
-
-
-Package natbib Warning: Citation `Z.Parker20131' on page 2 undefined on input line 147.
-
-
-Package natbib Warning: Citation `G.D.Ferreira2013125' on page 2 undefined on input line 147.
-
-
-Package natbib Warning: Citation `M.Ercan190510' on page 2 undefined on input line 148.
-
-
-Package natbib Warning: Citation `S.Edlich2018' on page 2 undefined on input line 151.
-
-
-Package natbib Warning: Citation `Z.Goli-Malekabadi201675' on page 2 undefined on input line 165.
-
-
-Package natbib Warning: Citation `K.Lee201299' on page 2 undefined on input line 165.
-
-
-Package natbib Warning: Citation `H.Al-Fatlawi2015122' on page 2 undefined on input line 165.
-
-
-Package natbib Warning: Citation `O.Schmitt20121' on page 2 undefined on input line 165.
-
-
-Package natbib Warning: Citation `Y.Jin2011288' on page 2 undefined on input line 165.
-
-
-Package natbib Warning: Citation `C.Chan2010300' on page 2 undefined on input line 175.
-
-
-Package natbib Warning: Citation `A.Ostrovsky20141' on page 2 undefined on input line 176.
-
-
-Package natbib Warning: Citation `A.Ostrovsky20141' on page 2 undefined on input line 182.
-
-
-Package natbib Warning: Citation `C.Chan2010300' on page 2 undefined on input line 183.
-
-
-LaTeX Warning: Reference `fig.framework' on page 2 undefined on input line 185.
-
-<figure.png, id=30, 1714.405pt x 805.0075pt>
+<figure.png, id=84, 1714.405pt x 805.0075pt>
 File: figure.png Graphic file (type png)
 <use figure.png>
-Package pdftex.def Info: figure.png  used on input line 189.
+Package pdftex.def Info: figure.png  used on input line 190.
 (pdftex.def)             Requested size: 462.89554pt x 217.35493pt.
-
-Package natbib Warning: Citation `DBEnginesRanking2018' on page 2 undefined on input line 200.
-
-[2]
-Overfull \hbox (3.64493pt too wide) in paragraph at lines 207--208
+ [2]
+Overfull \hbox (3.64493pt too wide) in paragraph at lines 208--209
 []\OT1/cmr/m/it/10 Executing test scripts against eval-u-a-tion cri-te-ria. \OT1/cmr/m/n/10 The
  []
 
 
-Overfull \hbox (1.61151pt too wide) in paragraph at lines 207--208
+Overfull \hbox (1.61151pt too wide) in paragraph at lines 208--209
 \OT1/cmr/m/n/10 test scripts were fun-da-men-tally de-rived from the eval-
  []
 
-
-Package natbib Warning: Citation `G.Weglarz200419' on page 3 undefined on input line 219.
-
-
-Package natbib Warning: Citation `J.Walonoski2018230' on page 3 undefined on input line 223.
-
-
-Package natbib Warning: Citation `HealthDataManagement2017' on page 3 undefined on input line 225.
-
-
-Package natbib Warning: Citation `J.C.M2016899' on page 3 undefined on input line 226.
-
 [3 <./figure.png>]
-
-LaTeX Warning: Reference `table.dataset.composition' on page 4 undefined on input line 244.
-
-
-Overfull \hbox (2.7504pt too wide) in paragraph at lines 250--259
+Overfull \hbox (2.7504pt too wide) in paragraph at lines 251--260
  [][] 
  []
 
 
-Overfull \hbox (6.88943pt too wide) in paragraph at lines 266--269
+Overfull \hbox (6.88943pt too wide) in paragraph at lines 267--270
 \OT1/cmr/m/n/10 called \pa-tient", \pro-ce-dure", \di-ag-nos-ti-cre-port", and
  []
 
 
-Overfull \hbox (6.18561pt too wide) in paragraph at lines 266--269
+Overfull \hbox (6.18561pt too wide) in paragraph at lines 267--270
 \OT1/cmr/m/n/10 \con-di-tion". The 1 mil-lion pa-tient records were parsed
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 266--269
+Underfull \hbox (badness 10000) in paragraph at lines 267--270
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--273
+Underfull \hbox (badness 10000) in paragraph at lines 270--274
 
  []
 
-[4]
-
-LaTeX Warning: Reference `table.cloud.environment' on page 5 undefined on input line 285.
-
-
-Package natbib Warning: Citation `S.Edlich2018' on page 5 undefined on input line 311.
-
-
-LaTeX Warning: Reference `table.technology.versions' on page 5 undefined on input line 312.
-
-[5]
-<images/performance/workloade.png, id=75, 433.62pt x 289.08pt>
+[4] [5]
+<images/performance/workloade.png, id=146, 433.62pt x 289.08pt>
 File: images/performance/workloade.png Graphic file (type png)
 <use images/performance/workloade.png>
-Package pdftex.def Info: images/performance/workloade.png  used on input line 387.
+Package pdftex.def Info: images/performance/workloade.png  used on input line 388.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadf.png, id=76, 433.62pt x 289.08pt>
+<images/performance/workloadf.png, id=147, 433.62pt x 289.08pt>
 File: images/performance/workloadf.png Graphic file (type png)
 <use images/performance/workloadf.png>
-Package pdftex.def Info: images/performance/workloadf.png  used on input line 391.
+Package pdftex.def Info: images/performance/workloadf.png  used on input line 392.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadi.png, id=77, 433.62pt x 289.08pt>
+<images/performance/workloadi.png, id=148, 433.62pt x 289.08pt>
 File: images/performance/workloadi.png Graphic file (type png)
 <use images/performance/workloadi.png>
-Package pdftex.def Info: images/performance/workloadi.png  used on input line 395.
+Package pdftex.def Info: images/performance/workloadi.png  used on input line 396.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloada.png, id=78, 433.62pt x 289.08pt>
+<images/performance/workloada.png, id=149, 433.62pt x 289.08pt>
 File: images/performance/workloada.png Graphic file (type png)
 <use images/performance/workloada.png>
-Package pdftex.def Info: images/performance/workloada.png  used on input line 405.
+Package pdftex.def Info: images/performance/workloada.png  used on input line 406.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadb.png, id=79, 433.62pt x 289.08pt>
+<images/performance/workloadb.png, id=150, 433.62pt x 289.08pt>
 File: images/performance/workloadb.png Graphic file (type png)
 <use images/performance/workloadb.png>
-Package pdftex.def Info: images/performance/workloadb.png  used on input line 409.
+Package pdftex.def Info: images/performance/workloadb.png  used on input line 410.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadc.png, id=80, 433.62pt x 289.08pt>
+<images/performance/workloadc.png, id=151, 433.62pt x 289.08pt>
 File: images/performance/workloadc.png Graphic file (type png)
 <use images/performance/workloadc.png>
-Package pdftex.def Info: images/performance/workloadc.png  used on input line 413.
+Package pdftex.def Info: images/performance/workloadc.png  used on input line 414.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadd.png, id=81, 433.62pt x 289.08pt>
+<images/performance/workloadd.png, id=152, 433.62pt x 289.08pt>
 File: images/performance/workloadd.png Graphic file (type png)
 <use images/performance/workloadd.png>
-Package pdftex.def Info: images/performance/workloadd.png  used on input line 417.
+Package pdftex.def Info: images/performance/workloadd.png  used on input line 418.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--432
+Underfull \hbox (badness 10000) in paragraph at lines 425--433
 
  []
 
-<images/scalability/workloadc.png, id=82, 433.62pt x 289.08pt>
+<images/scalability/workloadc.png, id=153, 433.62pt x 289.08pt>
 File: images/scalability/workloadc.png Graphic file (type png)
 <use images/scalability/workloadc.png>
-Package pdftex.def Info: images/scalability/workloadc.png  used on input line 440.
+Package pdftex.def Info: images/scalability/workloadc.png  used on input line 441.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/scalability/workloade.png, id=83, 433.62pt x 289.08pt>
+<images/scalability/workloade.png, id=154, 433.62pt x 289.08pt>
 File: images/scalability/workloade.png Graphic file (type png)
 <use images/scalability/workloade.png>
-Package pdftex.def Info: images/scalability/workloade.png  used on input line 444.
+Package pdftex.def Info: images/scalability/workloade.png  used on input line 445.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/scalability/workloadf.png, id=84, 433.62pt x 289.08pt>
+<images/scalability/workloadf.png, id=155, 433.62pt x 289.08pt>
 File: images/scalability/workloadf.png Graphic file (type png)
 <use images/scalability/workloadf.png>
-Package pdftex.def Info: images/scalability/workloadf.png  used on input line 448.
+Package pdftex.def Info: images/scalability/workloadf.png  used on input line 449.
 (pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-
-LaTeX Warning: Reference `table.storage' on page 6 undefined on input line 459.
-
-[6]
-
-Package natbib Warning: Citation `O.Schmitt20121' on page 7 undefined on input line 503.
-
-
-Package natbib Warning: Citation `Z.Goli-Malekabadi201675' on page 7 undefined on input line 503.
-
-
-Package natbib Warning: Citation `J.Ellis2018' on page 7 undefined on input line 506.
-
-[7 <./images/performance/workloade.png> <./images/performance/workloadf.png> <./images/performance/workloadi.png>]
-
-Package natbib Warning: Citation `S.Wang2013268' on page 8 undefined on input line 517.
-
-
-Package natbib Warning: Citation `N.Ramachandran2016' on page 8 undefined on input line 519.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 516--521
+[6] [7 <./images/performance/workloade.png> <./images/performance/workloadf.png> <./images/performance/workloadi.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 517--522
 
  []
 
-[8 <./images/performance/workloada.png> <./images/performance/workloadb.png> <./images/performance/workloadc.png> <./images/performance/workloadd.png>] [9 <./images/scalability/workloadc.png> <./images/scalability/workloade.png> <./images/scalability/workloadf.png>]
-No file elsarticle-template.bbl.
+[8 <./images/performance/workloada.png> <./images/performance/workloadb.png> <./images/performance/workloadc.png> <./images/performance/workloadd.png>] [9 <./images/scalability/workloadc.png> <./images/scalability/workloade.png> <./images/scalability/workloadf.png>] (./elsarticle-template.bbl
+Underfull \hbox (badness 2213) in paragraph at lines 118--120
+[]\OT1/cmr/m/n/8 DB-Engines Rank-ing, Database rank-ing, Re-trieved from:
+ []
 
-Package natbib Warning: There were undefined citations.
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
+[]\OT1/cmr/m/n/8 HealthDataManagement, 6 award win-
+ []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 566.
-[10
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
+\OT1/cmr/m/n/8 ning FHIR ap-pli-ca-tion, Re-trieved from:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--138
+\OT1/cmr/m/n/8 https://www.healthdatamanagement.com/list/6-award-
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 567.
+ [11
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 566.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 567.
  (./elsarticle-template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 566.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 566.
-
-
-Package rerunfilecheck Warning: File `elsarticle-template.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `elsarticle-template.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  7EC6A743CD1658BE72A3AD5028200EA0;1035.
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 566.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 567.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 567.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 567.
  ) 
 Here is how much of TeX's memory you used:
- 6779 strings out of 492649
- 99110 string characters out of 6129622
- 212623 words of memory out of 5000000
- 10515 multiletter control sequences out of 15000+600000
- 8274 words of font info for 29 fonts, out of 8000000 for 9000
+ 7156 strings out of 492649
+ 105536 string characters out of 6129622
+ 220171 words of memory out of 5000000
+ 10857 multiletter control sequences out of 15000+600000
+ 8442 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,14n,30p,1300b,427s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on ./elsarticle-template.pdf (10 pages, 639001 bytes).
+ 32i,14n,30p,1296b,543s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
+Output written on elsarticle-template.pdf (11 pages, 668591 bytes).
 PDF statistics:
- 201 PDF objects out of 1000 (max. 8388607)
- 153 compressed objects within 2 object streams
- 73 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 378 PDF objects out of 1000 (max. 8388607)
+ 325 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 

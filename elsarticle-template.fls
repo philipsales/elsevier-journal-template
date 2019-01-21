@@ -75,6 +75,10 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.cfg
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/subfigure/subfigure.cfg
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/booktabs/booktabs.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bookmark.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bookmark.sty
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
+INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/makecell/makecell.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/tools/array.sty
@@ -94,7 +98,6 @@ INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/latex/hyperref/nameref.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 INPUT /usr/local/texlive/2018/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
-OUTPUT ./elsarticle-template.out
 OUTPUT ./elsarticle-template.pdf
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
@@ -144,8 +147,6 @@ INPUT ./images/scalability/workloadf.png
 INPUT ./images/scalability/workloadf.png
 INPUT ./images/scalability/workloadf.png
 INPUT ./elsarticle-template.aux
-INPUT ./elsarticle-template.out
-INPUT ./elsarticle-template.out
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb

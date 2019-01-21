@@ -8,6 +8,7 @@
 
 % for merge cells
 \usepackage{booktabs}
+\usepackage{bookmark}
 
 % for newline in a table cell
 \usepackage{makecell}
@@ -122,25 +123,25 @@ The increasing size and complexity of data being generated in healthcare industr
 Currently, storage of clinical data largely relies on relational database management systems 
 \cite{Z.Goli-Malekabadi201675,K.Lee201299} and has been the most common approach of data 
 storage since the 90’s \cite{P.Atzeni1993}. From the time of its origins in the 1970’s, the relational 
-model had been adapted widely in many database management system \cite{K.Berg201329,D.Suciu200139}, and 
+model had been adapted widely in many database management systems \cite{K.Berg201329,D.Suciu200139} and 
 had remained unchanged for decades \cite{M.Ercan190510}. This modeling approach had become the de 
 facto standard for most industries, but remains ineffective in the field of healthcare due to the characteristics
- of clinical and biomedical data.
+of clinical and biomedical data.
 
 Healthcare data are dynamic, hierarchal, sporadic, and heterogeneous in nature. 
 It is stored in various types including free text, coded data elements, images, signals, logs, or notes that is formatted in either structured, semi-structured, 
 or unstructured presentation \cite{M.Ercan190510,K.Lee201299,C.S.Kruse201638,S.White201413,S.Wasan1192016}.
-The heterogeneity of formats, increasing volume, and dynamic structure makes it difficult to model and manage health 
+The heterogeneity of formats, high volume exchange, and dynamic structure makes it difficult to model and manage health 
 data using the traditional relational database \cite{K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288}.
 
 In addition, one of the major drawback of relational database is the need for pre-designed schema. 
 Predefining the data structure is impractical since pre-determing the combination and variety of data fields to be collected in a medical record is unrealistic \cite{K.Lee201299}. 
 %The issue of pre-defining data structure is the fact that it is unrealistic to pre-determine all the variety of data fields to be collected in a medical form much less a clinical record \cite{K.Lee201299}. 
 
-Succintly, RDBMS is not flexible, scalable, and extensible to overcome the problem of constant changing requirements, heterogenous formats, increasing volume, and the continuous need for updates in healthcare data \cite{Z.Goli-Malekabadi201675,K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288}.
+Succintly, RDBMS is not flexible, scalable, and extensible to overcome the problem of constantly changing requirements, various formats, increasing volume, and the continuous need for updates in healthcare data \cite{Z.Goli-Malekabadi201675,K.Lee201299,H.Al-Fatlawi2015122,O.Schmitt20121,Y.Jin2011288}.
 
 Against these backdrops, there is a constant demand and practical need for alternatives outside the conventional relational data modeling approach. 
-As evidence there are increasing researches and industry projects on alternative databases that are driven by the practical experience of the conflicting static 
+As evidence there are increasing researches and industry projects on databases that are driven by the practical experience of the conflicting static 
 nature of relational database and dynamic characteristics of healthcare data \cite{M.Ercan190510}.
 
 Out of the wide spectrum of viable alternatives, this study identified NoSQL database as supported by literature to be suitable in addressing the challenges of 
@@ -152,12 +153,12 @@ Additionally, it is not always straightforward to declare which database type is
 can best address the healthcare data challenge. To date, there is a paucity of literature that provides guiding principle, standard protocol, or framework on how to
 evaluate of database for healthcare industry.
 
-In light of the foregoing, this study attempted to evaluate different NoSQL databases using application-specific evaluation criteria. 
+In light of the foregoing, this study attempted to evaluate three NoSQL database types (i.e. document based, columnar wide, key-value pair) using an systematic evaluation approach. 
 
 The sections below are organized as follows.
-Section 2 offers an overview on different approaches to handle and maintain big data such as health data. 
-Section 3 describes the nature of health data and presents appropriate model for it.
-The performances of former and new model are discussed in section 4. 
+Section 2 offers an overview on research project context and the evaluation approach taken. 
+Section 3 describes the methodology performed for the testing and prototyping of each NoSQL database type.
+The final results of the application-specific evaluation criteria are discussed in section 4. 
 Subsequently, a conclusion is given in section 5.
 
 \section{Background}
