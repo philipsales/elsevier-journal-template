@@ -149,6 +149,23 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
 \newblock \href {http://dx.doi.org/10.1093/jamia/ocv189}
   {\path{doi:10.1093/jamia/ocv189}}.
 
+\bibitem{B.F.Cooper2010143}
+{B.F. Cooper and A. Silberstein and E. Tam and R. Ramakrishnan and R. Sears},
+  {Benchmarking cloud serving systems with YCSB }, in: {Proceedings of the 1st
+  ACM Symposium on Cloud Computing}, {ACM}, {Indianapolis, Indiana, USA},
+  December 2010, pp. 143--154.
+\newblock \href {http://dx.doi.org/10.1145/1807128.1807152}
+  {\path{doi:10.1145/1807128.1807152}}.
+
+\bibitem{Patil11ycsb++:benchmarking}
+S.~Patil, M.~Polte, K.~Ren, W.~Tantisiriroj, L.~Xiao, J.~López, G.~Gibson,
+  Ycsb++: Benchmarking and performance debugging advanced features in scalable
+  table stores (2011).
+
+\bibitem{RedisLabs2018}
+{RedisLabs}, {Redis Persistence}, {Retrieved from:
+  https://redis.io/topics/persistence (access on November 30, 2018)}.
+
 \bibitem{J.Ellis2018}
 {J. Ellis}, {The evolution of schema in Cassandra}, {DataStax. Retrieved from:
   https://www.datastax.com/dev/blog/schema-in-cassandra-1-1 (accessed on
@@ -160,5 +177,10 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
   Science} 24 (2013) 268--273.
 \newblock \href {http://dx.doi.org/10.1016/j.procs.2013.10.050}
   {\path{doi:10.1016/j.procs.2013.10.050}}.
+
+\bibitem{N.Ramachandran2016}
+{N. Ramachandran and W.K. Wong and I. McNicoll}, {Healthcare Data Issues -
+  Internal Data Modelling, Data Transfer, Data Model vs Dataset}, {Retrieved
+  from: http://opencancer.net (accessed on April 2018)}.
 
 \end{thebibliography}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  21 JAN 2019 23:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2018.4.16)  24 JAN 2019 22:17
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -386,12 +386,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 
 ]
-<figure.png, id=84, 1714.405pt x 805.0075pt>
-File: figure.png Graphic file (type png)
-<use figure.png>
-Package pdftex.def Info: figure.png  used on input line 190.
-(pdftex.def)             Requested size: 462.89554pt x 217.35493pt.
-
+<SeDB6.png, id=84, 407.5225pt x 595.22375pt>
+File: SeDB6.png Graphic file (type png)
+<use SeDB6.png>
+Package pdftex.def Info: SeDB6.png  used on input line 190.
+(pdftex.def)             Requested size: 203.76074pt x 297.61115pt.
+ [2 <./SeDB6.png>]
 Overfull \hbox (3.19579pt too wide) in paragraph at lines 201--204
 []\OT1/cmr/m/it/10 Clinical Con-tex-tu-al-iza-tion. \OT1/cmr/m/n/10 Defin-ing the re-quire-ments
  []
@@ -406,7 +406,7 @@ Overfull \hbox (5.76894pt too wide) in paragraph at lines 210--215
 \OT1/cmr/m/n/10 value. This pa-per pre-sented the three dif-fer-ent NoSQL
  []
 
-[2]
+
 Overfull \hbox (2.60236pt too wide) in paragraph at lines 222--226
 \OT1/cmr/m/n/10 da-men-tally de-rived from the eval-u-a-tion cri-te-ria. Each
  []
@@ -421,7 +421,12 @@ Overfull \hbox (0.16594pt too wide) in paragraph at lines 247--252
 []\OT1/cmr/m/n/10 The FHIR clin-i-cal datasets were syn-thet-i-cally pro-duced
  []
 
-[3 <./figure.png>]
+[3]
+Overfull \hbox (5.61162pt too wide) in paragraph at lines 281--285
+\OT1/cmr/m/n/10 elling, map-ping, and text ma-nip-u-la-tion pro-cesses were taken
+ []
+
+
 Overfull \hbox (6.88943pt too wide) in paragraph at lines 287--290
 \OT1/cmr/m/n/10 called \pa-tient", \pro-ce-dure", \di-ag-nos-ti-cre-port", and
  []
@@ -441,76 +446,90 @@ Underfull \hbox (badness 10000) in paragraph at lines 290--294
 
  []
 
-[4] [5]
-<images/performance/workloade.png, id=153, 433.62pt x 289.08pt>
-File: images/performance/workloade.png Graphic file (type png)
-<use images/performance/workloade.png>
-Package pdftex.def Info: images/performance/workloade.png  used on input line 412.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadf.png, id=154, 433.62pt x 289.08pt>
-File: images/performance/workloadf.png Graphic file (type png)
-<use images/performance/workloadf.png>
-Package pdftex.def Info: images/performance/workloadf.png  used on input line 416.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadi.png, id=155, 433.62pt x 289.08pt>
-File: images/performance/workloadi.png Graphic file (type png)
-<use images/performance/workloadi.png>
-Package pdftex.def Info: images/performance/workloadi.png  used on input line 420.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloada.png, id=156, 433.62pt x 289.08pt>
-File: images/performance/workloada.png Graphic file (type png)
-<use images/performance/workloada.png>
-Package pdftex.def Info: images/performance/workloada.png  used on input line 430.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadb.png, id=157, 433.62pt x 289.08pt>
-File: images/performance/workloadb.png Graphic file (type png)
-<use images/performance/workloadb.png>
-Package pdftex.def Info: images/performance/workloadb.png  used on input line 434.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadc.png, id=158, 433.62pt x 289.08pt>
-File: images/performance/workloadc.png Graphic file (type png)
-<use images/performance/workloadc.png>
-Package pdftex.def Info: images/performance/workloadc.png  used on input line 438.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-<images/performance/workloadd.png, id=159, 433.62pt x 289.08pt>
-File: images/performance/workloadd.png Graphic file (type png)
-<use images/performance/workloadd.png>
-Package pdftex.def Info: images/performance/workloadd.png  used on input line 442.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--457
-
+[4]
+Overfull \hbox (18.4867pt too wide) in paragraph at lines 380--391
+ [][] 
  []
 
+[5]
 <images/scalability/workloadc.png, id=160, 433.62pt x 289.08pt>
 File: images/scalability/workloadc.png Graphic file (type png)
 <use images/scalability/workloadc.png>
-Package pdftex.def Info: images/scalability/workloadc.png  used on input line 465.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+Package pdftex.def Info: images/scalability/workloadc.png  used on input line 431.
+(pdftex.def)             Requested size: 208.13524pt x 138.75682pt.
 <images/scalability/workloade.png, id=161, 433.62pt x 289.08pt>
 File: images/scalability/workloade.png Graphic file (type png)
 <use images/scalability/workloade.png>
-Package pdftex.def Info: images/scalability/workloade.png  used on input line 469.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+Package pdftex.def Info: images/scalability/workloade.png  used on input line 435.
+(pdftex.def)             Requested size: 208.13524pt x 138.75682pt.
 <images/scalability/workloadf.png, id=162, 433.62pt x 289.08pt>
 File: images/scalability/workloadf.png Graphic file (type png)
 <use images/scalability/workloadf.png>
-Package pdftex.def Info: images/scalability/workloadf.png  used on input line 473.
-(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
-[6] [7 <./images/performance/workloade.png> <./images/performance/workloadf.png> <./images/performance/workloadi.png>]
+Package pdftex.def Info: images/scalability/workloadf.png  used on input line 439.
+(pdftex.def)             Requested size: 208.13524pt x 138.75682pt.
 
-Package natbib Warning: Citation `N.Ramachandran2016' on page 8 undefined on input line 544.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 541--546
-
+Overfull \hbox (3.85124pt too wide) in paragraph at lines 464--466
+\OT1/cmr/m/n/10 load A, B, C, D) like ex-tract-ing and search-ing data. Though
  []
 
-[8 <./images/performance/workloada.png> <./images/performance/workloadb.png> <./images/performance/workloadc.png> <./images/performance/workloadd.png>] [9 <./images/scalability/workloadc.png> <./images/scalability/workloade.png> <./images/scalability/workloadf.png>] (./elsarticle-template.bbl
+[6]
+<images/performance/workloade.png, id=169, 433.62pt x 289.08pt>
+File: images/performance/workloade.png Graphic file (type png)
+<use images/performance/workloade.png>
+Package pdftex.def Info: images/performance/workloade.png  used on input line 479.
+(pdftex.def)             Requested size: 208.13524pt x 138.75682pt.
+<images/performance/workloadf.png, id=170, 433.62pt x 289.08pt>
+File: images/performance/workloadf.png Graphic file (type png)
+<use images/performance/workloadf.png>
+Package pdftex.def Info: images/performance/workloadf.png  used on input line 483.
+(pdftex.def)             Requested size: 208.13524pt x 138.75682pt.
+<images/performance/workloadi.png, id=171, 433.62pt x 289.08pt>
+File: images/performance/workloadi.png Graphic file (type png)
+<use images/performance/workloadi.png>
+Package pdftex.def Info: images/performance/workloadi.png  used on input line 487.
+(pdftex.def)             Requested size: 208.13524pt x 138.75682pt.
+<images/performance/workloada.png, id=172, 433.62pt x 289.08pt>
+File: images/performance/workloada.png Graphic file (type png)
+<use images/performance/workloada.png>
+Package pdftex.def Info: images/performance/workloada.png  used on input line 497.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+<images/performance/workloadb.png, id=173, 433.62pt x 289.08pt>
+File: images/performance/workloadb.png Graphic file (type png)
+<use images/performance/workloadb.png>
+Package pdftex.def Info: images/performance/workloadb.png  used on input line 501.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+<images/performance/workloadc.png, id=174, 433.62pt x 289.08pt>
+File: images/performance/workloadc.png Graphic file (type png)
+<use images/performance/workloadc.png>
+Package pdftex.def Info: images/performance/workloadc.png  used on input line 505.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+<images/performance/workloadd.png, id=175, 433.62pt x 289.08pt>
+File: images/performance/workloadd.png Graphic file (type png)
+<use images/performance/workloadd.png>
+Package pdftex.def Info: images/performance/workloadd.png  used on input line 509.
+(pdftex.def)             Requested size: 216.80946pt x 144.53964pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[7 <./images/scalability/workloadc.png> <./images/scalability/workloade.png> <./images/scalability/workloadf.png> <./images/performance/workloade.png> <./images/performance/workloadf.png> <./images/performance/workloadi.png>]
+<Query.png, id=201, 2085.7925pt x 1206.5075pt>
+File: Query.png Graphic file (type png)
+<use Query.png>
+Package pdftex.def Info: Query.png  used on input line 548.
+(pdftex.def)             Requested size: 526.37598pt x 304.47964pt.
+
+Overfull \hbox (4.37598pt too wide) in paragraph at lines 548--550
+ [][] 
+ []
+
+[8 <./images/performance/workloada.png> <./images/performance/workloadb.png> <./images/performance/workloadc.png> <./images/performance/workloadd.png>]
+<Readability.png, id=219, 863.225pt x 273.02pt>
+File: Readability.png Graphic file (type png)
+<use Readability.png>
+Package pdftex.def Info: Readability.png  used on input line 571.
+(pdftex.def)             Requested size: 241.70135pt x 76.44507pt.
+ [9 <./Query.png> <./Readability.png>] (./elsarticle-template.bbl
 Underfull \hbox (badness 2213) in paragraph at lines 118--120
 []\OT1/cmr/m/n/8 DB-Engines Rank-ing, Database rank-ing, Re-trieved from:
  []
@@ -530,33 +549,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--134
 \OT1/cmr/m/n/8 https://www.healthdatamanagement.com/list/6-award-
  []
 
-[10])
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
+[]\OT1/cmr/m/n/8 RedisLabs, Re-dis Per-sis-tence, Re-trieved from:
+ []
 
-Package natbib Warning: There were undefined citations.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 591.
-[11
+Underfull \hbox (badness 10000) in paragraph at lines 166--168
+\OT1/cmr/m/n/8 https://redis.io/topics/persistence (ac-cess on Novem-ber
+ []
+
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 613.
+ [11
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 591.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 613.
  (./elsarticle-template.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 591.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 591.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 591.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 613.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 613.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 613.
  ) 
 Here is how much of TeX's memory you used:
- 7155 strings out of 492649
- 105517 string characters out of 6129622
- 220171 words of memory out of 5000000
- 10857 multiletter control sequences out of 15000+600000
+ 7186 strings out of 492649
+ 106127 string characters out of 6129622
+ 219510 words of memory out of 5000000
+ 10880 multiletter control sequences out of 15000+600000
  8442 words of font info for 30 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,14n,30p,1296b,563s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 32i,14n,30p,1296b,547s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on elsarticle-template.pdf (11 pages, 667493 bytes).
+Output written on elsarticle-template.pdf (11 pages, 659258 bytes).
 PDF statistics:
- 379 PDF objects out of 1000 (max. 8388607)
- 326 compressed objects within 4 object streams
- 99 named destinations out of 1000 (max. 500000)
- 192 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 336 compressed objects within 4 object streams
+ 104 named destinations out of 1000 (max. 500000)
+ 202 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -185,11 +185,11 @@ and the context-driven component evaluation process of Technology Selection Fram
 The aim is to provide reproducible and reusable process in evaluating database that can address healthcare data requirements.
 The steps are illustrated in Figure \ref{fig.framework} and this study's application are outlined below. 
 
-\begin{figure*}[ht]
+\begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.27] {figure}
+    \includegraphics[scale=0.5] {SeDB6}
     \caption{Database Evaluation for Healthcare}\label{fig.framework}
-\end{figure*}
+\end{figure}
 
 \begin{enumerate}
 \item \emph{Specification Scoping}. 
@@ -261,7 +261,7 @@ diagnosis, conditions, diagnostic reports, and procedures. Hence, these resource
 The selected resources data composition are shown in Table \ref{table.dataset.composition} below.
 
 
-\begin{table}[!hbp]
+\begin{table}[!htp]
     \centering
     \caption[l]{Clinical Dataset Composition}
      \label{table.dataset.composition}
@@ -278,7 +278,7 @@ The selected resources data composition are shown in Table \ref{table.dataset.co
 
 
 \subsection{NoSQL data modelling}
-Considering that each NoSQL type has different approach on how data is stored,
+Considering that each NoSQL type has different approach on how data is supposedly stored,
 a series of modelling, mapping, and text manipulation processes were taken to satisfy the physical data model prerequisites of each database. 
 For instance, since Redis follows a key-value convention, the dataset must be transformed to represent a key-value notation. 
 The section below describes how the datasets were mapped according to each database technical requirement. 
@@ -297,18 +297,13 @@ The one-to-many relationship between patient and condition, and diagnostic repor
 
 \end{enumerate}
 
-
 \subsection{Testing and Prototyping}
-To ensure consistency of measurement and isolation of extraneous variables that may impact the evaluation results, 
-this study made use of a mature, properly documented, well cited, and the de facto database testing client. 
-Yahoo! Cloud Serving Benchmarking (YCSB) was chosen as the open source testing client for comparative evaluation of the data stores. It is the leading choice and industry-standard for performance benchmarking of cloud based databases (Patil, et.al, 2011).
-YCSB is an internal research and development project of Yahoo! that was open-sourced in 2010 in order to reach a wider community (Cooper, 2010). It has two main components: First, it contains various interfaces, integration drivers, connectors, libraries, and processes for a number of databases. At the time of writing, YCSB has over forty-six (46) database interfaces currently available for testing. And, YCSB also allows addition of other databases that are not currently included in the list. Lastly, YCSB has generic workloads and reporting framework which are extensible libraries that manages the execution of the different types of database task and the output of the reporting format.
-
-The measurement of performance evaluation was conducted in a cloud based computing environment. 
-
-For the environment deployment, the study used Linode Cloud Servers as the third-party cloud provider. 
-All working versions (see Table \ref{table.cloud.environment}) like the database test client (YCSB), patient mass generator, NoSQL databases, 
-and operating system for the server instance were kept identical to provide consistency. 
+All testing was conducted using Linode servers as the third-party provider with the following configurations (see Table \ref{table.cloud.environment}). 
+The study used a cloud based computing environment in a centralized setup. 
+Undoubtedly, a single node instsance seem unacceptable for industry level and production grade; 
+however, using it can serve as baseline information for comparison against multiple node configuration. 
+Moreover, it provide insights on the capabilities of each identified database without the extraneous variables like network latency, infrastructure technology, architectural design, and internet connectivity among others. 
+ 
 
 \begin{table}[ht]
     \centering
@@ -328,14 +323,16 @@ and operating system for the server instance were kept identical to provide cons
     \end{tabular}
 \end{table}
 
+In addition, a measurement and evaluation tool called Yahoo! Cloud Service Benchmarking (YCSB) framework was used to manage the test execution.
+YCSB is an open-source benchmarking utility that served as the middleware software responsible for abstracting the technical complexity of environmental installation and configuration of the selected database technologies, datasets, and workloads \cite{B.F.Cooper2010143}.
+It is the leading choice and industry-standard for performance benchmarking of cloud based databases \cite{Patil11ycsb++:benchmarking}.
 
+YCSB has two main components: First, it contains various interfaces, integration drivers, connectors, and processes for a number of databases. 
+As of writing, YCSB has over forty-six (46) database connectors ready for for interfacing, also it allows extension for other databases not yet in the list. 
+Second, YCSB has generic workloads and reporting framework which are libraries that manages the execution of the different types of database operation and reporting output format.
+						
 
-The testing environment were also dockerized in a virtual container to allow convenient reinstallation and simulation. 
-Furthermore, each cloud instance servers were set-up under the following specifications
-
-NoSQL databases is in a rapidly innovative landscape with currently having 225 \cite{S.Edlich2018} and continuously increasing; 
-it is important to note that the following versions were installed in the instance Table \ref{table.technology.versions} .
-\begin{table}[hb]
+\begin{table}[h]
     \centering															
     \caption{Technology Specifications}
      \label{table.technology.versions}
@@ -353,7 +350,48 @@ it is important to note that the following versions were installed in the instan
     \end{tabular}															
 \end{table}
 
-\begin{table*}[t]
+
+Other dependencies and versions like the database patient mass generator, NoSQL databases, and operating system were are shown in Table \ref{table.technology.versions}. 
+
+	
+\section{Results and Discussion} In this section, the results of the three NoSQL database are discussed from the perspectives of performance, scalability, storage, query readability, flexibility, and extensibility
+
+\subsection{Storage} 
+
+In table \ref{table.storage} Cassandra showed to be most effective in storing the raw file, which driven by its merging functionality commonly referred as compaction. 
+The main idea of thie operational process is reusing space to improve read performance. 
+On the opposite end, Redis consumed the most disk space. This is attributed to study's configuration of using Redis append only files (AOF) over Redis database (RDB). 
+The AOF setup was preferred against RDB to minimize the chance of data loss - the fact that data being process in this research is clinical based. 
+As stated, AOF files are usually bigger than the equivalent raw and RDB files for the same dataset \cite{RedisLabs2018}; in effect it occupied more disk space among the three NoSQL databases.
+
+However, these remarkable storage rate differences are by no means statistically significant when subjected  rank-based nonparametric test. 
+													
+%The four groupings of dataset were scaled by a factor of ten (10x); 
+%remarkably however, the storage size differences of in-between groupings had an average 90\% more than the previous. 
+%For instance, the difference between first group (i.e. 1,000 records) to the next group (i.e. 10,000 records) is roughly 90\% and the difference for the succeeding group (i.e. 10,000 and 100,000 records) is also about 90\%. 
+%This indicates that the data storage storage scaling behavior of all three databases is strongly consistent. 
+%However, when the databases were compared to the average size of FHIR Patient resource in its raw JSON format, it was observed that the size changes by substantial degree. Among the three, Cassandra had the best storage rate of 61% decrease in size while the Redis had the most disk storage consumption with increase of 38% from the original file. However, these remarkable storage rate differences are by no means statistically significant when when subjected to inferential computation 
+
+
+\begin{table}[ht]															
+    \centering															
+    \caption{Storage Sizes for 1 Million Patient Record}															
+    \label{table.storage}															
+    \begin{tabular}{llrr}   
+        \toprule															
+            Type        &	Total storage                   & 	\makecell[c]{ Average size } & \makecell[c]{ Relative } \\
+                        &   \makecell[c]{ size }            &	\makecell[c]{ per record }   & \makecell[c]{ increase } \\
+        \hline	
+            Raw JSON    & 3.98 x 10\textsuperscript{-2} GB  &   3.98 x 10\textsuperscript{-3} MB &		        \\
+            Cassandra	& 1.54 GB                           &	1.54 MB	                         &	+ 61.30\%	\\
+            MongoDB		& 3.45 GB                           &	3.45 MB	                         &	+ 25.12\%	\\
+            Redis	    & 10.5 GB                           &	10.5 MB	                         &	- 38.37\%	\\
+        \hline
+    \end{tabular}															
+\end{table}		
+
+
+\begin{table*}[ht]
     \centering															
     \caption{Performance and Scalability Workloads}
      \label{table.workload.definition}
@@ -372,23 +410,46 @@ it is important to note that the following versions were installed in the instan
     \end{tabular}															
 \end{table*}															
 
+
+\subsection{Scalability}
+Scalability is interpreted as the capacity of to   handle increasing load by having simultaneous and parallel task. 
+The measurement focus of scalability in this study pertains to the maximum number of database operations in a single second (i.e. throughput) 
+under increasing threaded processes or parallel loads.  Real-life application of threaded transactions can be seen during scenarios of multiple 
+users using the system simultaneously. The results in table above was deployed using the configuration of 128 threads 
+using the 1,000 records, which is an optmistic projection on biobanking system usage. 
+Results showed that Redis still outperformed others in all database operations (i.e. Workload A to I).  
+Also as shown in the table, Workload I or Bulk Insert operations was left blank from this criteria, because using simultaneous multiple bulk inserts 
+encountered issues of duplicate ‘unique’ identifiers for MongoDB and Cassandra; hence, it was excluded from the results for all database.
 													
+\begin{figure}[!hb]
+    \centering
+    \caption{Scalability of NoSQL Databases for 128 threads using 1,000 records in single node}
+    \label{scalability.workloads}
+        \subfigure[Read only]{
+            \includegraphics[scale =0.48] {images/scalability/workloadc}
+            \label{scalability.workloadc}
+        }
+        \subfigure[Short Ranges]{
+            \includegraphics[scale =0.48] {images/scalability/workloade}
+            \label{scalability.workloade}
+        }
+        \subfigure[Read-Insert-Update]{
+            \includegraphics[scale =0.48] {images/scalability/workloadf}
+            \label{scalability.workloadf}
+        }
+\end{figure}
 
-Single node may not be practical and efficient for industry level and production grade. 
-However, it is worth noting that using single instance can provide a basic level of information that can
-be used as means of base comparison against multiple node configuration. 
-Moreover, single node provides the insights on the capabilities of each identified database without 
-the extraneous variables like network latency, infrastructure design, and internet connectivity. 
-Furthermore, the aim of this study is to compare the variables based on the specified evaluation criteria.
-Fault tolerant, replication, and recovery were not implied, stipulated, or included during the elicitation of end user requirement. 
+With the configuration of 128 threads on 1,000 patient records in a centralized or single node computing environment, 
+it was found (as shown in Table 14.2) that there are significant differences in the scalability among the selected databases for all types of workload.
+In addition, Table 14.1 revealed that Redis is significantly the most scalable for most of the workloads (except Workload F). 
+On the contrary, the post analysis showed that Cassandra was the least scalable. 
+This result supported the performance of Redis for 1,000 patient records shown in Figure 14.1; 
+concisely, this experiment showed that Redis have the most efficient performance and scalability when subjected to smaller dataset (e.g. 1,000 patient records). 
 
-
-
-\section{Results and Discussion}
-
-\paragraph{} In this section, the results of the three NoSQL database, 
-are discussed based on our experience in the database development and their applications for the storage of structured clinical data, 
-from the perspectives of performance, scalability, storage, query readability, flexibilit, and extensibility
+													
+Notable findings in Section 4.2.2. are: (1) Cassandra is the most effective on scan operations, (2) MongoDB decreased in throughput as parallel task were increased, (3) Redis dominated in most operations (Workload A, B, C, D, F) for smaller sample datasets, and (4) performed the least on Write-Insert-Update operation (Workload E). 
+First, the scan efficiency of Cassandra is correlated to its storage efficiency (Chan, E., 2016). To cite tangible and real world analogy, it is always faster to search and scan adjacent paper documents in a properly organized and alphabetically arranged file cabinets. For the second findings on MongoDB, the deceased in throughput when the threads were increased can be attributed to its built-in locking mechanism (Kabakus, et. Al 2017). This pseudo data integrity feature is the tradeoff effect for the eventual consistency that currently exist in MongoDB. 
+On one hand, Redis was found to be the most efficient on all workloads under 1,000 to 10,000 records. This is due to the in-memory technology advantage of Redis. Data saved using in-memory are always retrieve faster than those stored in persistent storage because it uses the random access memory (i.e. RAM) as compared to utilizing in disk or hard drive. On the other hand, the inefficiency on scans of Redis is due to its data store architecture. Since Redis is limited with only the two fields - namely the key-value column, storage of new data is appended at the last row making the hash table grow vertically as opposed having a balance to horizontal (i.e. columnar) increased. Thus a simple search for contiguous data meant traversing the whole array of key-value items it currently stores. However, this seemingly inefficient scan operation of Redis can be augmented by sharding and clustering architecture or configuration, something that is beyond the goal of this study.
 
 
 \subsection{Performance}
@@ -399,31 +460,37 @@ Redis is the fastest when dealing with the minimal set of data (i.e. 1,000 recor
 As the number of records increased, it is observed to be outperformed by MongoDB and Cassandra on the non-READ related operations (i.e. Workload E, F, and I).  
 Moreover, it is constantly the most efficient on all READ related operations (i.e. Workload A to D) for all different dataset sizes. 
 MongoDB fared best on both INSERT related operations (i.e. Read-Insert-Update and Bulk Load) while Cassandra topped the Short Range workload. 
-To infer if these latency differences were meaningful, it was computed and found that significant differences 
+
+This experiment showed congruent results stating that Redis performed the best for both scalability and performance on all READ intensive database operations (Workload A, B, C, D) like extracting and searching data. 
+Though different datasets and configuration may have been used in these study, Redis being the most efficient on READ related operations were also supported by the following benchmarking (Ellis, 2012; Alteros, 2018).
+
+However, the difference was seen in MongoDB as it showed to be more effective on CRUD based operations (Workload F) and Bulk Loading or INSERT intensive applications (Workload I) than Redis. For Cassandra, it found to be well suitable for use cases that involves contiguous scanning (Workload E). This scan speed is attributed to the storage efficiency (Chan, E., 2016) of Cassandra which is evident in Table 15. This type of database operation is most applicable for data warehousing and analytical processing are commonly the database operations for data warehousing and analytical processing. 
+
+To infer if these latency differences were meaningful, it was computed and found that statistical differences 
 exist for all workload when subjected to different dataset sample sizes. 
 
-\begin{figure}
+\begin{figure}[!ht]
     \centering
+    \caption{Performance of NoSQL Databases for Non-Read related Operations}
     \label{performance.workloads.nonreads}
-    \caption{Latencies of Workloads A to F and I – Latency of Read Database Operations for Different Number of Records}
         \subfigure[Short Ranges]{
-            \includegraphics[scale =0.5] {images/performance/workloade}
+            \includegraphics[scale =0.48] {images/performance/workloade}
             \label{performance.workloade}
             }
         \subfigure[Read-Insert-Update]{
-            \includegraphics[scale =0.5] {images/performance/workloadf}
+            \includegraphics[scale =0.48] {images/performance/workloadf}
             \label{performance.workloadf}
             }
         \subfigure[Bulk Insert]{
-            \includegraphics[scale =0.5] {images/performance/workloadi}
+            \includegraphics[scale =0.48] {images/performance/workloadi}
             \label{performance.workloadi}
             }
 \end{figure}
 
-\begin{figure*}[!h]
+\begin{figure*}[h]
     \centering
+    \caption{Performance of NoSQL Databases for Read related Operations}
     \label{performance.workloads.reads}
-    \caption{Latencies of Workloads A to F and I – Latency of Read Database Operations for Different Number of Records}
         \subfigure[Read heavy]{
            \includegraphics[scale =0.5] {images/performance/workloada}
            \label{performance.workloada}
@@ -444,83 +511,6 @@ exist for all workload when subjected to different dataset sample sizes.
 
 
 
-\subsection{Scalability}
-% \ref{scalability.workloads}
-Scalability is interpreted as the capacity of to   handle increasing load by having simultaneous and parallel task. 
-The measurement focus of scalability in this study pertains to the maximum number of database operations in a single second (i.e. throughput) 
-under increasing threaded processes or parallel loads.  Real-life application of threaded transactions can be seen during scenarios of multiple 
-users using the system simultaneously. The results in table above was deployed using the configuration of 128 threads 
-using the 1,000 records, which is an optmistic projection on biobanking system usage. 
-Results showed that Redis still outperformed others in all database operations (i.e. Workload A to I).  
-Also as shown in the table, Workload I or Bulk Insert operations was left blank from this criteria, because using simultaneous multiple bulk inserts 
-encountered issues of duplicate ‘unique’ identifiers for MongoDB and Cassandra; hence, it was excluded from the results for all database.\newline
-
-\begin{figure*}[!hpb]
-    \centering
-    \label{scalability.workloads}
-    \caption{Latencies of Workloads A to F and I – Latency of Read Database Operations for Different Number of Records}
-        \subfigure[Read only]{
-            \includegraphics[scale =0.5] {images/scalability/workloadc}
-            \label{scalability.workloadc}
-        }
-        \subfigure[Short Ranges]{
-            \includegraphics[scale =0.5] {images/scalability/workloade}
-            \label{scalability.workloade}
-        }
-        \subfigure[Read-Insert-Update]{
-            \includegraphics[scale =0.5] {images/scalability/workloadf}
-            \label{scalability.workloadf}
-        }
-\end{figure*}
-
-With the configuration of 128 threads on 1,000 patient records in a centralized or single node computing environment, 
-it was found (as shown in Table 14.2) that there are significant differences in the scalability among the selected databases for all types of workload.
-In addition, Table 14.1 revealed that Redis is significantly the most scalable for most of the workloads (except Workload F). 
-On the contrary, the post analysis showed that Cassandra was the least scalable. 
-This result supported the performance of Redis for 1,000 patient records shown in Figure 14.1; 
-concisely, this experiment showed that Redis have the most efficient performance and scalability when subjected to smaller dataset (e.g. 1,000 patient records). 
-
-\subsection{Storage} 
-The table \ref{table.storage} shows the comparison of storage sizes when compared against the raw file, dataset sizes, and different databases. 
-The four groupings of dataset were scaled by a factor of ten (10x); 
-remarkably however, the storage size differences of in-between groupings had an average 90 percent more than the previous. 
-For instance, the difference between first group (i.e. 1,000 records) to the next group (i.e. 10,000 records) is roughly 90 percent and the difference
-for the succeeding group (i.e. 10,000 and 100,000 records) is also about 90 percent. 
-
-
-\begin{table*}															
-    \centering															
-    \caption{Storage Sizes (GB) for FHIR Patient Resource}															
-    \label{table.storage}															
-    \begin{tabular}{llllllrc}   
-        \toprule															
-            NoSQL	&	NoSQL	&	\multicolumn{4}{c}{Number of Records}							&	Average size	&	Storage	\\
-            Type	&	Database	&	1,000	&	10,000	&	100,000	&	1,000,000	&	per resource	&	Ratio	\\
-        \hline	&		&		&		&		&		&		&		\\
-            JSON files	&		&		&		&		&	 3.98 x 10-2	&	40.00 KB	&		\\
-            Columnar	&	Cassandra	&	1.56 x 10-3	&	1.56 x 10-2	&	1.56 x 10-1	&	1.54	&	1.54 MB	&	+61.30\%	\\
-            Document	&	MongoDB	&	3.46 x 10-3	&	3.45 x 10-2	&	3.45 x 10-1	&	3.45	&	3.45 MB	&	+25.12\%	\\
-            Key-value	&	Redis	&	1.06 x 10-2	&	1.04 x 10-1	&	1.04	&	10.5	&	10.5 MB	&	-38.37\%	\\
-        \hline
-    \end{tabular}															
-\end{table*}															
-
-This indicates that the data storage storage scaling behavior of all three databases is strongly consistent. 
-However, when the databases were compared to the average size of FHIR Patient resource in its raw JSON format, 
-it was observed that the size changes by substantial degree. Among the three, Cassandra had the best storage rate of 61 percent 
-decrease in size while the Redis had the most disk storage consumption with increase of 38 percent from the original file. 
-However, these remarkable storage rate differences are by no means statistically significant when when subjected to inferential computation.
-
-\subsection{Query Readability}
-Four (4) scenarios were selected to represent different database operations: 
-insert, update, search-aggregate, and multiple transactions. 
-These query syntaxes are valid query language statements but in an abridged form. 
-Meaning, not all database table variables and fields were shown in order to avoid technical intimidation among the study participants. 
-The main goal of the query readability evaluation was to assessed the intuitiveness and ease of understanding 
-of each database query structure and semantics. 
-Though the results rely on the participants’ biases or lack thereof, it cannot be dismissed on grounds of subjectivity because measuring intuitiveness 
-can also be targeted among participants with certain level or complete unfamiliarity to the particular subject of interest or topic. 
-The participants’ responses were then subjected to inferential statistics and shown below.
 
 \subsection{Flexibility}
 Flexibility can be interpreted from many perspectives, among the common are technology architecture, deployment process, and schema capabilities. 
@@ -528,6 +518,7 @@ In this study, discussion of flexibility is taken from the latter perspective.
 By definition, it is defined as the capability to store dynamically changing data without having a predefined schema \cite{O.Schmitt20121,Z.Goli-Malekabadi201675}. 
 However, flexibility is not totally equivalent to having no schema, but rather on the capacity to accommodate changes without substantial overhead requirements. 
 Cassandra involves the need to write an additional parser in order to import and fit the raw nested JSON data into the columnar-wide type format that it currently supports.
+
 For versions above 0.7, it was required to have columns and its data types be defined upfront \cite{J.Ellis2018}. From the initial approach of “schemaless”, 
 it had transitioned into a “schema-optional”. Which meant, that it is heading back to where relational databases started: having predefined columns and data types. 
 Thus, the original roadmap of being a schemaless approach was abandoned. This requirement is not necessary for native document-based databases like MongoDB among others. 
@@ -542,7 +533,7 @@ Extensibility is capability to accommodate additional revisions on attributes, c
 without the overhauling need to reconstruct or create new database \cite{S.Wang2013268}. 
 Though, a lot of workarounds are available to model for extensibility and cover the inefficient schema design, 
 at a certain point if the core infrastructure is inadequate, there is only so much patching that can be done before reaching the limits of the platform \cite{N.Ramachandran2016}.
-Thus, a native, built-in, and inherent infrastructure is preferred to a “patch work” type of solution and temporary workaround.\newline
+Thus, a native, built-in, and inherent infrastructure is preferred to a “patch work” type of solution and temporary workaround.
 
 When comparing extensibility within NoSQL groups, no notable difference is observed since all the data structure can be extended either 
 vertically (i.e. columnar-wide type) or horizontally (i.e. for both document-based and key-value types). 
@@ -550,6 +541,37 @@ Addition of new fields, columns and nested values are allowed without the need o
 However, it is noted that there is constraint of extensibility particularly to the Cassandra, as it requires additional 
 “alter table” script in order for the new changes to be committed.
 
+\begin{table*}[ht]
+    \centering
+    \caption{Query Readability of NoSQL Databases}
+    %\includegraphics[width=18cm,height=6cm,keepaspectratio,]{Query}
+    \includegraphics[width=18.5cm,keepaspectratio]{Query}
+    \label{fig.Query}
+\end{table*}
+
+\subsection{Query Readability}
+Four (4) scenarios were selected to represent different database operations: 
+insert, update, search-aggregate, and multiple transactions. 
+These query syntaxes are valid query language statements but in an abridged form. 
+Meaning, not all database table variables and fields were shown in order to avoid technical intimidation among the study participants. 
+The main goal of the query readability evaluation was to assessed the intuitiveness and ease of understanding 
+of each database query structure and semantics. 
+Though the results rely on the participants’ biases or lack thereof, it cannot be dismissed on grounds of subjectivity because measuring intuitiveness 
+can also be targeted among participants with certain level or complete unfamiliarity to the particular subject of interest or topic. 
+The participants’ responses were then subjected to inferential statistics and shown below.
+
+For INSERT STATEMENT, there are significant differences between MongoDB when compared against Cassandra and between MongoDB when compared against Redis query readability. 
+As shown in the post hoc analysis below, MongoDB is significantly more readable than both Cassandra and Redis.
+For SEARCH AND AGGREGATE STATEMENT, there are significant differences between Cassandra when compared against Redis and between MongoDB when compared against Redis query readability. 
+As shown in the post hoc analysis below, Cassandra and MongoDB is significantly more readable than Redis, while no significant difference was noted between Cassandra and MongoDB.
+
+\begin{table}[ht]
+    \centering
+    \caption{Test Statistics\textsuperscript{a,b} for Database Query Readability }
+    \includegraphics[scale=0.28] {Readability}
+    \label{fig.readability}
+\end{table}
+	
 
 \section{Conclusion}
 NoSQL database technology offers flexibility, extensibility, efficiency, and scalability where the traditional relational database fell short. 

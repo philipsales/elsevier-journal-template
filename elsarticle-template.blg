@@ -3,54 +3,57 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: elsarticle-template.aux
 The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
+Warning--entry type for "N.Ramachandran2016" isn't style-file defined
+--line 837 of file mybibfile.bib
 Warning--entry type for "S.Edlich2018" isn't style-file defined
---line 843 of file mybibfile.bib
+--line 851 of file mybibfile.bib
 Warning--entry type for "J.Ellis2018" isn't style-file defined
---line 857 of file mybibfile.bib
+--line 865 of file mybibfile.bib
 Warning--entry type for "HealthDataManagement2017" isn't style-file defined
---line 871 of file mybibfile.bib
+--line 879 of file mybibfile.bib
 Warning--entry type for "DBEnginesRanking2018" isn't style-file defined
---line 885 of file mybibfile.bib
-Warning--I didn't find a database entry for "N.Ramachandran2016"
-You've used 26 entries,
+--line 893 of file mybibfile.bib
+Warning--entry type for "RedisLabs2018" isn't style-file defined
+--line 907 of file mybibfile.bib
+You've used 30 entries,
             2937 wiz_defined-function locations,
-            870 strings with 10700 characters,
-and the built_in function-call counts, 7107 in all, are:
-= -- 727
-> -- 104
-< -- 5
-+ -- 52
-- -- 26
-* -- 438
-:= -- 905
-add.period$ -- 40
-call.type$ -- 26
-change.case$ -- 26
+            892 strings with 11582 characters,
+and the built_in function-call counts, 8170 in all, are:
+= -- 819
+> -- 138
+< -- 6
++ -- 66
+- -- 36
+* -- 488
+:= -- 1032
+add.period$ -- 45
+call.type$ -- 30
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 233
-empty$ -- 878
-format.name$ -- 26
-if$ -- 1901
+cite$ -- 30
+duplicate$ -- 274
+empty$ -- 1014
+format.name$ -- 37
+if$ -- 2192
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 22
-newline$ -- 100
-num.names$ -- 26
-pop$ -- 162
+int.to.str$ -- 30
+missing$ -- 23
+newline$ -- 113
+num.names$ -- 30
+pop$ -- 203
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 524
+skip$ -- 608
 stack$ -- 0
-substring$ -- 412
-swap$ -- 79
-text.length$ -- 5
+substring$ -- 448
+swap$ -- 91
+text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 68
-width$ -- 28
-write$ -- 241
-(There were 5 warnings)
+while$ -- 75
+width$ -- 32
+write$ -- 273
+(There were 6 warnings)
