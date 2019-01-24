@@ -180,7 +180,7 @@ emerging systems, and technology trend. There are limited models, empirical evid
 Thus, this paper adapted a database evaluation framework that will evaluate NoSQL databases against context-based parameters. 
 
 \subsection{Evaluation Approach}
-The principles of of this study's evaluation framework was inspired from themes of Digital Selection Framework \cite{A.Ostrovsky20141} 
+The principles of this study's evaluation framework was inspired from themes of Digital Selection Framework \cite{A.Ostrovsky20141} 
 and the context-driven component evaluation process of Technology Selection Framework for Health Interventions \cite{C.Chan2010300}. 
 The aim is to provide reproducible and reusable process in evaluating database that can address healthcare data requirements.
 The steps are illustrated in Figure \ref{fig.framework} and this study's application are outlined below. 
@@ -233,8 +233,8 @@ Summary of results were displayed tabular or graphical presentation showing the 
 \subsection{Evaluation Criteria}
 
 The data gathered from stakeholders' discussions and interviews were translated into quality attribute scenarios (QAS), functionality lists, use cases, business requirements, and software specifications.
-Following the guidelines of QAS workshop set by Barbacci (2003) \cite{M.R.Barbacci2003} and further prioritizing the functionality lists 
-resulted into the the following evaluation criteria: performance, scalability, storage, readability, flexibility, and extensibility
+Following the guidelines of QAS workshop set by Barbacci (2003) \cite{M.R.Barbacci2003} and further prioritization of functionality lists 
+resulted into the final evaluation criteria: performance, scalability, storage, readability, flexibility, and extensibility
 
 \subsection{Clinical Datasets in HL7-FHIR}
 Medical data formatted in standard information modeling ensures interoperability, compatibility \cite{K.Lee201299}, and conceptual normalization.
@@ -299,7 +299,9 @@ The one-to-many relationship between patient and condition, and diagnostic repor
 
 
 \subsection{Testing and Prototyping}
-To ensure consistency of measurement and isolation of extraneous variables that may impact the evaluation results, it is imperative that this study made use of a mature, properly documented, well cited, and the de facto database testing client. Yahoo! Cloud Serving Benchmarking (YCSB) was chosen as the open source testing client for comparative evaluation of the data stores. It is the leading choice and industry-standard for performance benchmarking of cloud based databases (Patil, et.al, 2011).
+To ensure consistency of measurement and isolation of extraneous variables that may impact the evaluation results, 
+this study made use of a mature, properly documented, well cited, and the de facto database testing client. 
+Yahoo! Cloud Serving Benchmarking (YCSB) was chosen as the open source testing client for comparative evaluation of the data stores. It is the leading choice and industry-standard for performance benchmarking of cloud based databases (Patil, et.al, 2011).
 YCSB is an internal research and development project of Yahoo! that was open-sourced in 2010 in order to reach a wider community (Cooper, 2010). It has two main components: First, it contains various interfaces, integration drivers, connectors, libraries, and processes for a number of databases. At the time of writing, YCSB has over forty-six (46) database interfaces currently available for testing. And, YCSB also allows addition of other databases that are not currently included in the list. Lastly, YCSB has generic workloads and reporting framework which are extensible libraries that manages the execution of the different types of database task and the output of the reporting format.
 
 The measurement of performance evaluation was conducted in a cloud based computing environment. 
