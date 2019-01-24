@@ -187,7 +187,7 @@ The steps are illustrated in Figure \ref{fig.framework} and this study's applica
 
 \begin{figure}[ht]
     \centering
-    \includegraphics[scale=0.5] {SeDB6}
+    \includegraphics[scale=0.55] {SeDB6}
     \caption{Database Evaluation for Healthcare}\label{fig.framework}
 \end{figure}
 
@@ -199,7 +199,7 @@ This type of application is not transaction intensive but rather storage and rep
 With this consideration, the study anticipated the need for a database that can manage voluminous and aggregatable data.
 
 \item \emph{Clinical Contextualization.} 
-Defining the requirements within the context of a clinical domain assures that the functionalities are clinically relevant and not technology focus solutions.
+Defining the requirements within the context of a clinical domain assures that the functionalities are clinically relevant and not technology centric solutions.
 Multiple sessions of focus group discussions (FGD) and key informant interviews with the technical and allied health professionals were done as method of elicitation for this step. 
 
 \item \emph{Criteria Formulation.} 
@@ -211,7 +211,6 @@ The metrics measured in this study are application specific. Nevertheless, the m
 On the grounds that the nature of clinical data is highly evolving and dynamic, one of the immediate selection filters is the capability to adapt to schema changes. In consequence, schema-less modelling approach was the logical option; hence, focus on NoSQL was the scope of the implementation. 
 This study evaluated only the highly represented and most popular database for each type of the NoSQL category \cite{DBEnginesRanking2018}.
 The selected NoSQL databases are MongoDB for the document category, Cassandra for the columnar, and Redis for the key-value.
-This paper presented the three different NoSQL types: document based, columnar wide, and key-value pair.
 
 \item \emph{Medical Data Preparation.} 
 The research utilized 1 million unique patient records. 
@@ -329,9 +328,19 @@ It is the leading choice and industry-standard for performance benchmarking of c
 
 YCSB has two main components: First, it contains various interfaces, integration drivers, connectors, and processes for a number of databases. 
 As of writing, YCSB has over forty-six (46) database connectors ready for for interfacing, also it allows extension for other databases not yet in the list. 
-Second, YCSB has generic workloads and reporting framework which are libraries that manages the execution of the different types of database operation and reporting output format.
-						
+Second, YCSB has core workloads and reporting framework which are libraries that manages the execution of the different types of database operation and reporting output format, respectively.
+The workloads refers to the standard "CRUD" database operations: Create, Read, Update, and Delete \cite{B.F.Cooper2010143}.
 
+\begin{itemize}
+   \item read() — read a single record from the database, and return either a specified set of fields or all fields.
+   \item insert() — insert a single record into the database.
+   \item update() — update a single record in the database, adding or replacing the specified fields.
+   \item delete() — delete a single record in the database.
+   \item scan() — execute a range scan, reading a specified number
+\end{itemize}
+
+Other dependencies that were used in the experimentation like the database patient mass generator, NoSQL databases, and operating system are shown in Table \ref{table.technology.versions}. 
+	
 \begin{table}[h]
     \centering															
     \caption{Technology Specifications}
@@ -351,9 +360,6 @@ Second, YCSB has generic workloads and reporting framework which are libraries t
 \end{table}
 
 
-Other dependencies and versions like the database patient mass generator, NoSQL databases, and operating system were are shown in Table \ref{table.technology.versions}. 
-
-	
 \section{Results and Discussion} In this section, the results of the three NoSQL database are discussed from the perspectives of performance, scalability, storage, query readability, flexibility, and extensibility
 
 \subsection{Storage} 
@@ -364,51 +370,25 @@ On the opposite end, Redis consumed the most disk space. This is attributed to s
 The AOF setup was preferred against RDB to minimize the chance of data loss - the fact that data being process in this research is clinical based. 
 As stated, AOF files are usually bigger than the equivalent raw and RDB files for the same dataset \cite{RedisLabs2018}; in effect it occupied more disk space among the three NoSQL databases.
 
-However, these remarkable storage rate differences are by no means statistically significant when subjected  rank-based nonparametric test. 
-													
-%The four groupings of dataset were scaled by a factor of ten (10x); 
-%remarkably however, the storage size differences of in-between groupings had an average 90\% more than the previous. 
-%For instance, the difference between first group (i.e. 1,000 records) to the next group (i.e. 10,000 records) is roughly 90\% and the difference for the succeeding group (i.e. 10,000 and 100,000 records) is also about 90\%. 
-%This indicates that the data storage storage scaling behavior of all three databases is strongly consistent. 
-%However, when the databases were compared to the average size of FHIR Patient resource in its raw JSON format, it was observed that the size changes by substantial degree. Among the three, Cassandra had the best storage rate of 61% decrease in size while the Redis had the most disk storage consumption with increase of 38% from the original file. However, these remarkable storage rate differences are by no means statistically significant when when subjected to inferential computation 
-
-
-\begin{table}[ht]															
+\begin{table}[!ht]															
     \centering															
     \caption{Storage Sizes for 1 Million Patient Record}															
     \label{table.storage}															
     \begin{tabular}{llrr}   
         \toprule															
-            Type        &	Total storage                   & 	\makecell[c]{ Average size } & \makecell[c]{ Relative } \\
-                        &   \makecell[c]{ size }            &	\makecell[c]{ per record }   & \makecell[c]{ increase } \\
+            Type        &	\makecell[c]{Total}             & 	\makecell[c]{ Average size } & \makecell[c]{ Storage } \\
+                        &   \makecell[c]{storage size}      &	\makecell[c]{ per record }   & \makecell[c]{ ratio } \\
         \hline	
-            Raw JSON    & 3.98 x 10\textsuperscript{-2} GB  &   3.98 x 10\textsuperscript{-3} MB &		        \\
-            Cassandra	& 1.54 GB                           &	1.54 MB	                         &	+ 61.30\%	\\
-            MongoDB		& 3.45 GB                           &	3.45 MB	                         &	+ 25.12\%	\\
-            Redis	    & 10.5 GB                           &	10.5 MB	                         &	- 38.37\%	\\
+            Raw JSON    & 3.98 x10\textsuperscript{-2} GB   &   3.98 KB                          &		        \\
+            Cassandra	& 1.54 GB                           &	1.54 KB	                         &	+ 61.30\%	\\
+            MongoDB		& 3.45 GB                           &	3.45 KB	                         &	+ 25.12\%	\\
+            Redis	    & 10.5 GB                           &	10.5 KB	                         &	- 38.37\%	\\
         \hline
     \end{tabular}															
 \end{table}		
+However, these remarkable storage rate differences are by no means statistically significant when subjected  rank-based nonparametric test. 
 
-
-\begin{table*}[ht]
-    \centering															
-    \caption{Performance and Scalability Workloads}
-     \label{table.workload.definition}
-     \begin{tabular}{llll}
-        \toprule
-        Workload & Distribution & Name & Description\\
-        \hline
-        \rule{0pt}{20pt}Workload A &\makecell[l]{ Read: 50\%  \\ Insert: 50\%} & Read heavy        & \makecell[l]{Retrieval of an existing record and creating a data \\in a field/s} \\
-        \rule{0pt}{20pt}Workload B &\makecell[l]{ Read: 95\%  \\ Update: 5\%}  & Read mostly       & \makecell[l]{Retrieval of an existing record and overwriting a data \\in a field/s} \\
-        \rule{0pt}{20pt}Workload C &\makecell[l]{ Read: 100\% \\ }             & Read only         & Searching a particular field/s in all existing records \\
-        \rule{0pt}{20pt}Workload D &\makecell[l]{ Read: 95\%  \\ Insert: 5\%}  & Read latest       & \makecell[l]{Inserting data in an empty field in a record and \\retrieving the field/s} \\
-        \rule{0pt}{20pt}Workload E & Scan: 100\%                               & Short Ranges      & Searching for limited number of contiguous records \\
-        \rule{0pt}{20pt}Workload F &\makecell[l]{ Read-Insert-\\Update: 100\%} & Read-Insert-Update& \makecell[l]{Creating a new record, updating the created record \\and retrieving the field/s} \\
-        \rule{0pt}{12pt}Workload I &\makecell[l]{ Insert: 100\%\\ }            & Insert only       & Inserting bundled records all at once \\
-        \hline
-    \end{tabular}															
-\end{table*}															
+													
 
 
 \subsection{Scalability}
@@ -417,11 +397,31 @@ The measurement focus of scalability in this study pertains to the maximum numbe
 under increasing threaded processes or parallel loads.  Real-life application of threaded transactions can be seen during scenarios of multiple 
 users using the system simultaneously. The results in table above was deployed using the configuration of 128 threads 
 using the 1,000 records, which is an optmistic projection on biobanking system usage. 
+
+\begin{table}[ht]
+    \centering															
+    \caption{Scalability and Performance Workload Configurations}
+     \label{table.workload.definition}
+     \begin{tabular}{lll}
+        \toprule
+        Workload & Distribution & Name \\
+        \hline
+        \rule{0pt}{20pt}Workload A &\makecell[l]{ Read: 50\%  \\ Insert: 50\%} & Read heavy        \\
+        \rule{0pt}{20pt}Workload B &\makecell[l]{ Read: 95\%  \\ Update: 5\%}  & Read mostly       \\
+        \rule{0pt}{20pt}Workload C &\makecell[l]{ Read: 100\% \\ }             & Read only         \\
+        \rule{0pt}{20pt}Workload D &\makecell[l]{ Read: 95\%  \\ Insert: 5\%}  & Read latest       \\
+        \rule{0pt}{20pt}Workload E & Scan: 100\%                               & Short Ranges      \\
+        \rule{0pt}{20pt}Workload F &\makecell[l]{ Read-Insert-\\Update: 100\%} & Read-Insert-Update\\
+        \rule{0pt}{12pt}Workload I &\makecell[l]{ Insert: 100\%\\ }            & Insert only       \\
+        \hline
+    \end{tabular}															
+\end{table}		
+
 Results showed that Redis still outperformed others in all database operations (i.e. Workload A to I).  
 Also as shown in the table, Workload I or Bulk Insert operations was left blank from this criteria, because using simultaneous multiple bulk inserts 
 encountered issues of duplicate ‘unique’ identifiers for MongoDB and Cassandra; hence, it was excluded from the results for all database.
 													
-\begin{figure}[!hb]
+\begin{figure}[!ht]
     \centering
     \caption{Scalability of NoSQL Databases for 128 threads using 1,000 records in single node}
     \label{scalability.workloads}
@@ -448,7 +448,8 @@ concisely, this experiment showed that Redis have the most efficient performance
 
 													
 Notable findings in Section 4.2.2. are: (1) Cassandra is the most effective on scan operations, (2) MongoDB decreased in throughput as parallel task were increased, (3) Redis dominated in most operations (Workload A, B, C, D, F) for smaller sample datasets, and (4) performed the least on Write-Insert-Update operation (Workload E). 
-First, the scan efficiency of Cassandra is correlated to its storage efficiency (Chan, E., 2016). To cite tangible and real world analogy, it is always faster to search and scan adjacent paper documents in a properly organized and alphabetically arranged file cabinets. For the second findings on MongoDB, the deceased in throughput when the threads were increased can be attributed to its built-in locking mechanism (Kabakus, et. Al 2017). This pseudo data integrity feature is the tradeoff effect for the eventual consistency that currently exist in MongoDB. 
+First, the scan efficiency of Cassandra is correlated to its storage efficiency \cite{E.Chan2016}. To cite tangible and real world analogy, it is always faster to search and scan adjacent paper documents in a properly organized and alphabetically arranged file cabinets. For the second findings on MongoDB, the deceased in throughput when the threads were increased can be attributed to its built-in locking mechanism \cite{A.Kabakus2017520}. 
+This pseudo data integrity feature is the tradeoff effect for the eventual consistency that currently exist in MongoDB. 
 On one hand, Redis was found to be the most efficient on all workloads under 1,000 to 10,000 records. This is due to the in-memory technology advantage of Redis. Data saved using in-memory are always retrieve faster than those stored in persistent storage because it uses the random access memory (i.e. RAM) as compared to utilizing in disk or hard drive. On the other hand, the inefficiency on scans of Redis is due to its data store architecture. Since Redis is limited with only the two fields - namely the key-value column, storage of new data is appended at the last row making the hash table grow vertically as opposed having a balance to horizontal (i.e. columnar) increased. Thus a simple search for contiguous data meant traversing the whole array of key-value items it currently stores. However, this seemingly inefficient scan operation of Redis can be augmented by sharding and clustering architecture or configuration, something that is beyond the goal of this study.
 
 
@@ -462,9 +463,9 @@ Moreover, it is constantly the most efficient on all READ related operations (i.
 MongoDB fared best on both INSERT related operations (i.e. Read-Insert-Update and Bulk Load) while Cassandra topped the Short Range workload. 
 
 This experiment showed congruent results stating that Redis performed the best for both scalability and performance on all READ intensive database operations (Workload A, B, C, D) like extracting and searching data. 
-Though different datasets and configuration may have been used in these study, Redis being the most efficient on READ related operations were also supported by the following benchmarking (Ellis, 2012; Alteros, 2018).
+Though different datasets and configuration may have been used in these study, Redis being the most efficient on READ related operations were also supported by the following benchmarking \cite{J.Ellis2018} \cite{Altoros2018}.
 
-However, the difference was seen in MongoDB as it showed to be more effective on CRUD based operations (Workload F) and Bulk Loading or INSERT intensive applications (Workload I) than Redis. For Cassandra, it found to be well suitable for use cases that involves contiguous scanning (Workload E). This scan speed is attributed to the storage efficiency (Chan, E., 2016) of Cassandra which is evident in Table 15. This type of database operation is most applicable for data warehousing and analytical processing are commonly the database operations for data warehousing and analytical processing. 
+However, the difference was seen in MongoDB as it showed to be more effective on CRUD based operations (Workload F) and Bulk Loading or INSERT intensive applications (Workload I) than Redis. For Cassandra, it found to be well suitable for use cases that involves contiguous scanning (Workload E). This scan speed is attributed to the storage efficiency \cite{E.Chan2016} of Cassandra which is evident in Table 15. This type of database operation is most applicable for data warehousing and analytical processing are commonly the database operations for data warehousing and analytical processing. 
 
 To infer if these latency differences were meaningful, it was computed and found that statistical differences 
 exist for all workload when subjected to different dataset sample sizes. 

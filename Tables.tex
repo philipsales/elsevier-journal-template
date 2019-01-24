@@ -1,0 +1,55 @@
+\begin{table*}[ht]															
+    \centering															
+    \caption{Storage Sizes (GB) for FHIR Patient Resource}															
+    \label{table.storage}															
+    \begin{tabular}{llllllrc}   
+        \toprule															
+            NoSQL	&	NoSQL	&	\multicolumn{4}{c}{Number of Records}							&	Average size	&	Storage	\\
+            Type	&	Database	&	1,000	&	10,000	&	100,000	&	1,000,000	&	per resource	&	Ratio	\\
+        \hline	&		&		&		&		&		&		&		\\
+            JSON files	&		&		&		&		&	 3.98 x 10-2	&	40.00 KB	&		\\
+            Columnar	&	Cassandra	&	1.56 x 10-3	&	1.56 x 10-2	&	1.56 x 10-1	&	1.54	&	1.54 MB	&	+61.30\%	\\
+            Document	&	MongoDB	&	3.46 x 10-3	&	3.45 x 10-2	&	3.45 x 10-1	&	3.45	&	3.45 MB	&	+25.12\%	\\
+            Key-value	&	Redis	&	1.06 x 10-2	&	1.04 x 10-1	&	1.04	&	10.5	&	10.5 MB	&	-38.37\%	\\
+        \hline
+    \end{tabular}															
+\end{table*}		
+
+
+\begin{table}[ht]															
+    \centering															
+    \caption{Storage Sizes (GB) for FHIR Patient Resource}															
+    \label{table.storage}															
+    \begin{tabular}{llllllrc}   
+        \toprule															
+            NoSQL	    &	NoSQL	    &	Number of Records	&	Average size	&	Storage	\\
+            Type	    &	Database	&   1,000,000           &	per resource	&	Ratio	\\
+        \hline	
+            &		    &		        &		                &				    &		       \\
+            JSON files	&		        & 3.98 x 10-2	        &	40.00 KB	    &		        \\
+            Columnar	&	Cassandra	& 1.54	                &	1.54 MB	        &	+61.30\%	\\
+            Document	&	MongoDB		& 3.45	                &	3.45 MB	        &	+25.12\%	\\
+            Key-value	&	Redis	    & 10.5	                &	10.5 MB	        &	-38.37\%	\\
+        \hline
+    \end{tabular}															
+\end{table}		
+
+
+\begin{table*}[ht]
+    \centering															
+    \caption{Performance and Scalability Workloads}
+     \label{table.workload.definition}
+     \begin{tabular}{llll}
+        \toprule
+        Workload & Distribution & Name & Description\\
+        \hline
+        \rule{0pt}{20pt}Workload A &\makecell[l]{ Read: 50\%  \\ Insert: 50\%} & Read heavy        & \makecell[l]{Retrieval of an existing record and creating a data \\in a field/s} \\
+        \rule{0pt}{20pt}Workload B &\makecell[l]{ Read: 95\%  \\ Update: 5\%}  & Read mostly       & \makecell[l]{Retrieval of an existing record and overwriting a data \\in a field/s} \\
+        \rule{0pt}{20pt}Workload C &\makecell[l]{ Read: 100\% \\ }             & Read only         & \makecell[l]{Read a single record from the database, \\and return either a specified set of fields or all field} \\
+        \rule{0pt}{20pt}Workload D &\makecell[l]{ Read: 95\%  \\ Insert: 5\%}  & Read latest       & \makecell[l]{Inserting data in an empty field in a record and \\retrieving the field/s} \\
+        \rule{0pt}{20pt}Workload E & Scan: 100\%                               & Short Ranges      & Searching for limited number of contiguous records \\
+        \rule{0pt}{20pt}Workload F &\makecell[l]{ Read-Insert-\\Update: 100\%} & Read-Insert-Update& \makecell[l]{Creating a new record, updating the created record \\and retrieving the field/s} \\
+        \rule{0pt}{12pt}Workload I &\makecell[l]{ Insert: 100\%\\ }            & Insert only       & Inserting bundled records all at once \\
+        \hline
+    \end{tabular}															
+\end{table*}															

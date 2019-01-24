@@ -4,56 +4,57 @@ The top-level auxiliary file: elsarticle-template.aux
 The style file: elsarticle-num.bst
 Database file #1: mybibfile.bib
 Warning--entry type for "N.Ramachandran2016" isn't style-file defined
---line 837 of file mybibfile.bib
+--line 863 of file mybibfile.bib
 Warning--entry type for "S.Edlich2018" isn't style-file defined
---line 851 of file mybibfile.bib
+--line 877 of file mybibfile.bib
 Warning--entry type for "J.Ellis2018" isn't style-file defined
---line 865 of file mybibfile.bib
+--line 891 of file mybibfile.bib
 Warning--entry type for "HealthDataManagement2017" isn't style-file defined
---line 879 of file mybibfile.bib
+--line 905 of file mybibfile.bib
 Warning--entry type for "DBEnginesRanking2018" isn't style-file defined
---line 893 of file mybibfile.bib
+--line 919 of file mybibfile.bib
 Warning--entry type for "RedisLabs2018" isn't style-file defined
---line 907 of file mybibfile.bib
-You've used 30 entries,
+--line 933 of file mybibfile.bib
+Warning--empty publisher in Altoros2018
+You've used 33 entries,
             2937 wiz_defined-function locations,
-            892 strings with 11582 characters,
-and the built_in function-call counts, 8170 in all, are:
-= -- 819
-> -- 138
+            910 strings with 12110 characters,
+and the built_in function-call counts, 8878 in all, are:
+= -- 889
+> -- 150
 < -- 6
-+ -- 66
-- -- 36
-* -- 488
-:= -- 1032
-add.period$ -- 45
-call.type$ -- 30
-change.case$ -- 30
++ -- 72
+- -- 39
+* -- 522
+:= -- 1119
+add.period$ -- 49
+call.type$ -- 33
+change.case$ -- 32
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 274
-empty$ -- 1014
-format.name$ -- 37
-if$ -- 2192
+cite$ -- 34
+duplicate$ -- 296
+empty$ -- 1109
+format.name$ -- 40
+if$ -- 2388
 int.to.chr$ -- 0
-int.to.str$ -- 30
-missing$ -- 23
-newline$ -- 113
-num.names$ -- 30
-pop$ -- 203
+int.to.str$ -- 33
+missing$ -- 26
+newline$ -- 123
+num.names$ -- 33
+pop$ -- 224
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 608
+skip$ -- 667
 stack$ -- 0
-substring$ -- 448
-swap$ -- 91
+substring$ -- 477
+swap$ -- 95
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 75
-width$ -- 32
-write$ -- 273
-(There were 6 warnings)
+warning$ -- 1
+while$ -- 80
+width$ -- 35
+write$ -- 299
+(There were 7 warnings)

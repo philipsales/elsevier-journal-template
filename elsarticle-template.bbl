@@ -116,7 +116,7 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
 
 \bibitem{DBEnginesRanking2018}
 {DB-Engines Ranking}, {Database ranking}, {Retrieved from:
-  https://db-engines.com/en/ranking (access on May 2018)}.
+  https://db-engines.com/en/ranking (accessed on May 2018)}.
 
 \bibitem{M.R.Barbacci2003}
 { M.R. Barbacci and R. Ellison and A.J. Lattanze and J.A. Stafford and C.B.
@@ -130,7 +130,7 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
 \bibitem{HealthDataManagement2017}
 {HealthDataManagement}, {6 award winning FHIR application}, {Retrieved from:
   https://www.healthdatamanagement.com/list/6-award-winning-fhir-applications
-  (access on November 2018)}.
+  (accessed on November 2018)}.
 
 \bibitem{J.Walonoski2018230}
 {J. Walonoski and M. Kramer and J. Nichols and A. Quina and C. Moesel and D.
@@ -164,12 +164,30 @@ S.~Patil, M.~Polte, K.~Ren, W.~Tantisiriroj, L.~Xiao, J.~López, G.~Gibson,
 
 \bibitem{RedisLabs2018}
 {RedisLabs}, {Redis Persistence}, {Retrieved from:
-  https://redis.io/topics/persistence (access on November 30, 2018)}.
+  https://redis.io/topics/persistence (accessed on November 30, 2018)}.
+
+\bibitem{E.Chan2016}
+{E. Chan}, {Apache Cassandra for analytics: A performance and storage
+  analysis}, {Retrieved from:
+  https://www.oreilly.com/ideas/apache-cassandra-for-analytics-a-performance-and-storage-analysis
+  (accessed November 30, 2018)} (2016).
+
+\bibitem{A.Kabakus2017520}
+{A.T. Kabakus and R. Kara}, {A performance evaluation of in-memory databases},
+  {Journal of King Saud University - Computer and Information Sciences} 29
+  (2017) 520--525.
+\newblock \href {http://dx.doi.org/10.1016/j.jksuci.2016.06.007}
+  {\path{doi:10.1016/j.jksuci.2016.06.007}}.
 
 \bibitem{J.Ellis2018}
 {J. Ellis}, {The evolution of schema in Cassandra}, {DataStax. Retrieved from:
   https://www.datastax.com/dev/blog/schema-in-cassandra-1-1 (accessed on
   November 2018)}.
+
+\bibitem{Altoros2018}
+{Altoros}, {NoSQL Performance Benchmark 2018}, 2016, {Retrieved from:
+  https://www.oreilly.com/ideas/apache-cassandra-for-analytics-a-performance-and-storage-analysis
+  (accessed November 30, 2018)}.
 
 \bibitem{S.Wang2013268}
 {S. Wang and Y. Man and T. Zhang and T.J. Wong and I. King}, {Data management
