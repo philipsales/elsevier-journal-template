@@ -123,6 +123,13 @@ S.~Edlich, List of nosql databases, {Retrieved from: http://nosql-database.org
   Weinstock and W.G. Wood }, {Quality Attribute Workshop, Third Edition},
   {Software Engineering Institute}.
 
+\bibitem{A.Gandomi2014137}
+{A. Gandomi and M. Haider}, {Beyond the hype: Big data concepts, methods, and
+  analytics}, {International Journal of Information Management} 35 (2014)
+  137--144.
+\newblock \href {http://dx.doi.org/110.1016/j.ijinfomgt.2014.10.007}
+  {\path{doi:110.1016/j.ijinfomgt.2014.10.007}}.
+
 \bibitem{G.Weglarz200419}
 {G. Weglarz}, {Two worlds of data – unstructured and structured }, {DM
   Review} 14 (2004) 19--22.
@@ -165,6 +172,21 @@ S.~Patil, M.~Polte, K.~Ren, W.~Tantisiriroj, L.~Xiao, J.~López, G.~Gibson,
 \bibitem{RedisLabs2018}
 {RedisLabs}, {Redis Persistence}, {Retrieved from:
   https://redis.io/topics/persistence (accessed on November 30, 2018)}.
+
+\bibitem{N.Zeng20171116}
+{N. Zeng and G.Q. Zhang and X. Li, and C. Licong}, {Evaluation of Relational
+  and NoSQL Approaches for Patient Cohort Identification from Heterogeneous
+  Data Sources}, {Journal of Health and Medical Informatics} 5 (2017)
+  1116--1121.
+\newblock \href {http://dx.doi.org/10.4172/2157-7420.1000295}
+  {\path{doi:10.4172/2157-7420.1000295}}.
+
+\bibitem{J.Gilchrist20113244}
+{J. Gilchrist and C. Ennet and M. Frize and E. Bariciak}, {Performance
+  Evaluation of Various Storage Formats for Clinical Data Repositories}, {IEEE
+  Transactions on Instrumentation and Measurement} 60 (2011) 3244--3252.
+\newblock \href {http://dx.doi.org/10.1109/TIM.2011.2122850}
+  {\path{doi:10.1109/TIM.2011.2122850}}.
 
 \bibitem{E.Chan2016}
 {E. Chan}, {Apache Cassandra for analytics: A performance and storage
